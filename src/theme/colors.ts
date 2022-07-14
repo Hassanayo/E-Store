@@ -16,7 +16,8 @@ const colors = {
     productCard3: "##DCA742",
     productCard4: "##656466",
     white: "FFFFFF",
-    black: "#000000"
+    black: "#000000",
+    gray: "#F1F2F3"
 }
 
 export default colors;

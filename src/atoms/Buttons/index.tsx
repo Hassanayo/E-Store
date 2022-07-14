@@ -4,9 +4,9 @@ import { ButtonProps } from './i-button'
 
   
 
-export default function Button({variant, children, size}: ButtonProps) {
+export default function Button({variant, children, width, height, onClick}: ButtonProps) {
   return (
-    <ButtonComponent size={size} variant={variant}>
+    <ButtonComponent width={width} variant={variant} height={height} onClick={onClick} >
         {children}
     </ButtonComponent>
   )

@@ -57,8 +57,8 @@ export const ButtonComponent = styled.button<ButtonProps>`
   font-weight: 700;
   font-size: 14px;
   line-height: 19px;
-  width: ${({ size }) => (size === "regular" ? "139" : "117")}px;
-  height: ${({ size }) => (size === "regular" ? "51" : "33")}px;
+  width: ${({ width }) => width};
+  height: ${({ height }) => (height)};
   color: #FFF;
   ${variantButtonStyles}
 `;
