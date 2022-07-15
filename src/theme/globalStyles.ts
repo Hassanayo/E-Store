@@ -6,11 +6,11 @@ const GlobalStyles = createGlobalStyle`
 ${reset};
 ::-moz-selection { /* Code for Firefox */
   color: #fff;
-  background: #ff4d4d;
+  background: #5ECE7B;
 }
 ::selection {
     color: #fff;
-  background: #ff4d4d;
+    background: #5ECE7B;
 }
 html, body {
     padding: 0;

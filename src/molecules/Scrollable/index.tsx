@@ -7,7 +7,7 @@ import { ScrollableContainer } from './scrollable.style'
 export default function Scrollable({title, children} : {title: any; children: React.ReactNode}) {
   return (
     <ScrollableContainer>
-        <p>{title}</p>
+        <p className='scroll-title'>{title}</p>
         <FlexBox className='scroll' flexDirection='column' gap='7px' >
             {children}
         </FlexBox>

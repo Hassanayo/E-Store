@@ -7,6 +7,15 @@ export const ScrollableContainer = styled.div`
     text-decoration: underline;
     cursor: pointer;
   }
+  .scroll-title{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 213.28%;
+    color: #1D1F22;
+
+  }
 
   .scroll {
     height: 200px;

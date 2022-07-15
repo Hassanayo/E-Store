@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { CheckboxContainer } from "./checkbox.style";
+import { CheckboxContainer, RadioContainer } from "./checkbox.style";
 
-export default function CheckBox() {
+export function CheckBox() {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <CheckboxContainer>
@@ -24,8 +24,30 @@ export default function CheckBox() {
             stroke={isChecked ? "#fff" : "none"}
           />
         </svg>
-        I want to create an account
+        
       </label>
     </CheckboxContainer>
+  );
+}
+export function Radio({onClick} : {onClick?: () => void}) {
+  const [isChecked, setIsChecked] = useState(false);
+  return (
+    <RadioContainer>
+      <label>
+        <input
+          type="checkbox"
+          onChange={() => {
+            setIsChecked(!isChecked);
+          }}
+          onClick={onClick}
+        />
+        <div className={`checkbox ${isChecked ? "checkbox--active" : ""}`}>
+          <div className="dot"> 
+
+          </div>
+
+        </div>
+      </label>
+    </RadioContainer>
   );
 }

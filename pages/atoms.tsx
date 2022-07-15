@@ -5,7 +5,7 @@ import {BrandDiscount, BrandHit} from '../src/atoms/Badge'
 import { FlexBox } from '../src/atoms/Boxes'
 import Breadcrumbs from '../src/atoms/Breadcrumbs'
 import Button from '../src/atoms/Buttons'
-import CheckBox from '../src/atoms/Checkbox'
+import {CheckBox, Radio} from '../src/atoms/Checkbox'
 import CircleIcons from '../src/atoms/CircleIcons'
 import Input from '../src/atoms/Input'
 import { Selectbox, SelectboxMobile } from '../src/atoms/Input/input.style'
@@ -33,6 +33,7 @@ export default function Test() {
           <p>hi</p>
         </FlexBox>
         <CheckBox/>
+        <Radio/>
         <FlexBox gap='10px'>
         <CircleIcons size='66px' hover colour={colors.brandPrimary} shadow><Close/></CircleIcons>
         <CircleIcons size='66px' hover colour={colors.errorPrimary} shadow><AddedToCart/></CircleIcons>

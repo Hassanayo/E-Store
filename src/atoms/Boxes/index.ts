@@ -10,6 +10,7 @@ export const FlexBox = styled.div<{justifyContent?: string, alignItems?: string,
     
 `
 export const Divider = styled.hr`
+margin: 0;
     opacity: 0.6;
     border: 0.6px solid #888a8e;
     width: 100%;

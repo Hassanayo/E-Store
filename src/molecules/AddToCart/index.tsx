@@ -10,7 +10,7 @@ import { AddToCartContainer } from "./addToCart.style";
 export function AddToCartDefault() {
   return (
     <FlexBox gap="11px">
-      <Button variant="callToAction" width="251" height="54">
+      <Button variant="callToAction" width="251px" height="54px">
         ADD TO CART
       </Button>
       <SelectboxMobile>
@@ -29,7 +29,7 @@ export function AddToCartBig() {
         <option value="">1</option>
         <option value="">1</option>
       </Selectbox>
-      <Button variant="callToAction" width="418" height="52">
+      <Button variant="callToAction" width="418px" height="52px">
         ADD TO CART
       </Button>
     </FlexBox>
@@ -47,7 +47,7 @@ export function AddToCartLow() {
         <option value="">1</option>
         <option value="">1</option>
       </Selectbox>
-      <Button variant="callToAction" width="418" height="52">
+      <Button variant="callToAction" width="418px" height="52px">
         ADD TO CART
       </Button>
       </FlexBox>
@@ -70,7 +70,7 @@ export function AddToCartAval() {
         <option value="">1</option>
         <option value="">1</option>
       </Selectbox>
-      <Button variant="callToAction" width="418" height="52">
+      <Button variant="callToAction" width="418px" height="52px">
         ADD TO CART
       </Button>
       </FlexBox>
