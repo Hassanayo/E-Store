@@ -24,12 +24,11 @@ export function CheckBox() {
             stroke={isChecked ? "#fff" : "none"}
           />
         </svg>
-        
       </label>
     </CheckboxContainer>
   );
 }
-export function Radio({onClick} : {onClick?: () => void}) {
+export function Radio({ onClick }: { onClick?: () => void }) {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <RadioContainer>
@@ -42,10 +41,7 @@ export function Radio({onClick} : {onClick?: () => void}) {
           onClick={onClick}
         />
         <div className={`checkbox ${isChecked ? "checkbox--active" : ""}`}>
-          <div className="dot"> 
-
-          </div>
-
+          <div className="dot"></div>
         </div>
       </label>
     </RadioContainer>

@@ -36,15 +36,13 @@ export const SelectBig = styled.select`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  color: #1D1F22;
-
-
-`
+  color: #1d1f22;
+`;
 export const Selectbox = styled.select`
   height: 52px;
   width: 91px;
@@ -65,7 +63,7 @@ export const SelectboxMobile = styled.select`
   width: 73px;
   padding: 11px 19px 11px 19px;
   background-color: ${({ theme }) => theme.colors?.white};
-  border: 1px solid #F1F2F3;
+  border: 1px solid #f1f2f3;
   display: flex;
   justify-content: center;
   align-items: center;

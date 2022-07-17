@@ -8,7 +8,8 @@ export const CallToActionContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 65px;
+  padding: 0 150px;
+  opacity: 0.8;
   .big-text {
     font-family: "Playfair Display";
     font-style: normal;

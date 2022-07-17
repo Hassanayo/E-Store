@@ -21,7 +21,7 @@ function variantButtonStyles({ variant }: ButtonProps) {
       return css`
         color: ${({ theme }) => theme.colors?.bgWhite};
         background-color: ${({ theme }) => theme.colors?.bgGrey};
-        
+
         border: 0;
         &:hover,
         &:active {
@@ -36,7 +36,7 @@ function variantButtonStyles({ variant }: ButtonProps) {
       return css`
         color: ${({ theme }) => theme.colors?.bgWhite};
         background-color: ${({ theme }) => theme.colors?.mainPrimary};
-        
+
         border: 0;
         &:hover,
         &:active {
@@ -58,7 +58,10 @@ export const ButtonComponent = styled.button<ButtonProps>`
   font-size: 14px;
   line-height: 19px;
   width: ${({ width }) => width};
-  height: ${({ height }) => (height)};
-  color: #FFF;
+  height: ${({ height }) => height};
+  color: #fff;
   ${variantButtonStyles}
+  :focus {
+    outline: none;
+  }
 `;

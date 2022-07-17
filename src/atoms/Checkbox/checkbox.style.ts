@@ -61,7 +61,7 @@ export const RadioContainer = styled.div`
     border-color: ${({ theme }) => theme.colors?.brandPrimary};
     background: ${({ theme }) => theme.colors?.brandPrimary};
   }
-  .dot{
+  .dot {
     width: 6px;
     height: 6px;
     background-color: #fff;

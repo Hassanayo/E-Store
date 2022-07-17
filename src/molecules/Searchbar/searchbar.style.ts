@@ -7,6 +7,7 @@ export const SearchbarButton =  styled.button<{white?: boolean}>`
     padding-left: 15px;
     display: flex;
     
+    
     align-items: center;
     background-color: ${({white}) => white ? colors?.white : colors?.gray};
     border-radius: 27px;
@@ -24,6 +25,9 @@ export const SearchbarButton =  styled.button<{white?: boolean}>`
         font-size: 14px;
         line-height: 26px;
         color: #1D1F22;
+    }
+    @media (max-width: 1080px){
+        display: none;
     }
 
 

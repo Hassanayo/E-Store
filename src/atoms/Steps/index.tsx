@@ -5,12 +5,10 @@ import { StepsContainer } from "./steps.styles";
 export default function Steps() {
   const [isClicked, setisClicked] = useState("");
 
-  
-  if (typeof window !== "undefined"){
-
+  if (typeof window !== "undefined") {
     var items = document.getElementsByClassName("step-box");
-    for (var i = 0; i < items.length ; i++) {
-      items[i].addEventListener("click", function (this:any) {
+    for (var i = 0; i < items.length; i++) {
+      items[i].addEventListener("click", function (this: any) {
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
@@ -20,7 +18,7 @@ export default function Steps() {
 
   return (
     <StepsContainer id="navbar">
-      <FlexBox  className="step-box active">
+      <FlexBox className="step-box active">
         <p className="step-text">Women</p>
       </FlexBox>
       <FlexBox className="step-box">

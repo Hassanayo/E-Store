@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import responsive from "../theme/responsive";
 
 export const LayoutWrapper = styled.div`
-   
-   max-width: 1440px;
-   margin: 0 auto;
-   padding: 0 100px;
+  max-width: 1440px;
+  padding: 0 100px;
+  margin: 0 auto;
+  @media screen and (max-width: 1080px) {
+    padding: 0 0;
+  }
 `;
-

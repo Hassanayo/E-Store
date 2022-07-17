@@ -21,8 +21,8 @@ export const StepsContainer = styled.div`
     border-bottom: 3px solid #1d1f22;
     width: 100%;
     border-radius: 1px;
-    p{
-        color: #1d1f22;
+    p {
+      color: #1d1f22;
     }
   }
 `;

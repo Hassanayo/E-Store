@@ -1,32 +1,37 @@
-import React from 'react'
-import { LeftArrow, RightArrow } from '../../assets/vectors'
-import { ArrowLeft, ArrowLeftLong, ArrowRight, ArrowRightLong } from './arrows.style'
-
-export function ArrowsLeftLong() {
+import React from "react";
+import { LeftArrow, RightArrow } from "../../assets/vectors";
+import {
+  ArrowLeft,
+  ArrowLeftLong,
+  ArrowRight,
+  ArrowRightLong,
+} from "./arrows.style";
+import { ButtonProps } from "../Buttons/i-button";
+export function ArrowsLeftLong({ onClick }: ButtonProps) {
   return (
     <ArrowLeftLong>
-      <LeftArrow/>
+      <LeftArrow />
     </ArrowLeftLong>
-  )
+  );
 }
-export function ArrowsRightLong() {
+export function ArrowsRightLong({ onClick }: ButtonProps) {
   return (
     <ArrowRightLong>
-      <RightArrow/>
+      <RightArrow />
     </ArrowRightLong>
-  )
+  );
 }
-export function ArrowsLeft() {
+export function ArrowsLeft({ onClick }: ButtonProps) {
   return (
-    <ArrowLeft>
-      <LeftArrow/>
+    <ArrowLeft onClick={onClick}>
+      <LeftArrow />
     </ArrowLeft>
-  )
+  );
 }
-export function ArrowsRight() {
+export function ArrowsRight({ onClick }: ButtonProps) {
   return (
-    <ArrowRight>
-      <RightArrow/>
+    <ArrowRight onClick={onClick}>
+      <RightArrow />
     </ArrowRight>
-  )
+  );
 }

@@ -2,14 +2,9 @@ import styled from "styled-components";
 
 export const HeroContainer = styled.section`
   background-image: url("/HeroImage.png");
-  height: 800px;
   background-repeat: no-repeat;
   background-size: auto;
-  margin: 0 auto;
-  padding: 0 180px;
-  display: flex;
-  
-  
+  padding-bottom: 100px;
   .hero-minitext {
     font-family: "Roboto";
     font-style: normal;
@@ -35,6 +30,10 @@ export const HeroContainer = styled.section`
     font-size: 36px;
     line-height: 48px;
     color: #1D1F22;
-
+    padding: 80px 500px 60px 0;
+  }
+  .hero-btn{
+    padding-left: 50px;
+    
   }
 `;

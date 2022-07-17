@@ -1,12 +1,10 @@
-import React from 'react'
-import { BreadcrumbsContainer } from './breadcrumbs.style'
+import React from "react";
+import { BreadcrumbsContainer } from "./breadcrumbs.style";
 
 interface BCprops {
-    children: React.ReactNode
+  children: React.ReactNode;
 }
 
-export default function Breadcrumbs({children}: BCprops) {
-  return (
-    <BreadcrumbsContainer>{children}</BreadcrumbsContainer>
-  )
+export default function Breadcrumbs({ children }: BCprops) {
+  return <BreadcrumbsContainer>{children}</BreadcrumbsContainer>;
 }

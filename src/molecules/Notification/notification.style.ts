@@ -28,14 +28,13 @@ export const NotificationContainer = styled.div<{ color?: string }>`
     color: #ffffff;
   }
   .n-details {
-    font-family: 'Playfair Display';
+    font-family: "Playfair Display";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 222.88%;
 
-
-color: #FFFFFF;
+    color: #ffffff;
   }
   .n-span {
     padding-left: 20px;

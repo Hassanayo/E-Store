@@ -3,7 +3,7 @@ import React from "react";
 import { CartBlack, HeartBlack, PersonIcon } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
 import Steps from "../../atoms/Steps";
-import { Searchbar } from "../../molecules/Searchbar";
+import { Searchbar, SearchbarSmall } from "../../molecules/Searchbar";
 import { HeaderContainer } from "./header.style";
 
 export default function Header() {
@@ -19,7 +19,7 @@ export default function Header() {
         
       </FlexBox>
       <FlexBox alignItems="center" gap="40px">
-          <Searchbar/>
+          <SearchbarSmall />
           <FlexBox gap="30px">
             <PersonIcon/>
             <HeartBlack/>
