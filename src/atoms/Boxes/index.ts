@@ -18,6 +18,12 @@ export const Divider = styled.hr`
   border: 0.6px solid #888a8e;
   width: 100%;
 `;
+export const DividerVertical = styled.hr`
+  margin: 0;
+  opacity: 0.6;
+  border: 0.6px solid #888a8e;
+  height: fit-content;
+`;
 export const ColorBox = styled.div<{ colour: string }>`
   width: 20px;
   height: 20px;

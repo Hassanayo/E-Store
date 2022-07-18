@@ -2,6 +2,7 @@ export interface IconProps {
   colour?: string;
   width?: string;
   height?: string;
+  onClick?: () => void
 }
 export const LeftArrow = () => (
   <svg
@@ -149,7 +150,7 @@ export const AddedToCart = ({ width, height }: IconProps) => (
     />
   </svg>
 );
-export const CartBlack = () => (
+export const CartBlack = ({onClick}: IconProps) => (
   <svg
     width="23"
     height="21"

@@ -9,14 +9,14 @@ import {
 import { ButtonProps } from "../Buttons/i-button";
 export function ArrowsLeftLong({ onClick }: ButtonProps) {
   return (
-    <ArrowLeftLong>
+    <ArrowLeftLong onClick={onClick}>
       <LeftArrow />
     </ArrowLeftLong>
   );
 }
 export function ArrowsRightLong({ onClick }: ButtonProps) {
   return (
-    <ArrowRightLong>
+    <ArrowRightLong onClick={onClick}>
       <RightArrow />
     </ArrowRightLong>
   );

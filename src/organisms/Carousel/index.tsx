@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
-import { ArrowsLeft, ArrowsRight, ArrowsRightLong } from "../../atoms/Arrows";
+import { ArrowsLeft, ArrowsLeftLong, ArrowsRight, ArrowsRightLong } from "../../atoms/Arrows";
 import { ArrowRight, ArrowRightLong } from "../../atoms/Arrows/arrows.style";
 import { FlexBox } from "../../atoms/Boxes";
 import { CarouselContainer } from "./carousel.style";
@@ -53,13 +53,13 @@ export default function Carousel({children, show} : any) {
   return (
     <CarouselContainer>
       <div className="carousel-wrapper">
-        <ArrowsLeft onClick={prev}/>
+        <ArrowsLeftLong onClick={prev}/>
         <div className="carousel-content-wrapper">
           <div className={`carousel-content show-${show}`} style={{ transform: `translateX(-${currentIndex * (100 / show)}%)` }}>
             {children}
           </div>
         </div>
-        {currentIndex < (length - show) && <ArrowsRight onClick={next}/>}
+        {currentIndex < (length - show) && <ArrowsRightLong onClick={next}/>}
       </div>
     </CarouselContainer>
   );

@@ -1,31 +1,59 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CartBlack, HeartBlack, PersonIcon } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
-import Steps from "../../atoms/Steps";
 import { Searchbar, SearchbarSmall } from "../../molecules/Searchbar";
+import ShoppingCart from "../Cart";
+import Megamenu from "../MegaMenu";
 import { HeaderContainer } from "./header.style";
 
-export default function Header() {
+export default function Header({cart, number}: any) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(true);
+  function openCart() {
+    setCartOpen(true);
+  }
+  function openMenu() {
+    setIsOpen(!isOpen);
+  }
+  useEffect(() => {
+    isOpen && (document.documentElement.style.overflow = "hidden");
+    !isOpen && (document.documentElement.style.overflow = "");
+  }, [isOpen]);
+
   return (
     <HeaderContainer>
-      <FlexBox >
+      <FlexBox>
         <FlexBox alignItems="center" gap="80px">
-          <img src="/StoreLogo.png"  alt="Logo" />
+          <img src="/StoreLogo.png" alt="Logo" />
           <FlexBox>
-            <Steps />
+            <div className="nav-select">
+              <FlexBox onClick={openMenu} className="step-box ">
+                <p className="step-text">Women</p>
+              </FlexBox>
+              <FlexBox className="step-box">
+                <p className="step-text">Men</p>
+              </FlexBox>
+              <FlexBox className="step-box">
+                <p className="step-text">Kids</p>
+              </FlexBox>
+            </div>
           </FlexBox>
         </FlexBox>
-        
       </FlexBox>
       <FlexBox alignItems="center" gap="40px">
-          <SearchbarSmall />
-          <FlexBox gap="30px">
-            <PersonIcon/>
-            <HeartBlack/>
-            <CartBlack/>
-          </FlexBox>
+        <SearchbarSmall />
+        <FlexBox gap="30px">
+          <PersonIcon />
+          <HeartBlack />
+          <div onClick={openCart}>
+            <CartBlack />
+          </div>
         </FlexBox>
+      </FlexBox>
+      {isOpen && <Megamenu SetIsOpen={setIsOpen} />}
+      {cartOpen && <ShoppingCart cart={cart} setCartOpen={setCartOpen} />}
     </HeaderContainer>
   );
 }

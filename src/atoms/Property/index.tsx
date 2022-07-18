@@ -3,7 +3,7 @@ import React from "react";
 export default function Property({ name, value }: any) {
   return (
     <div>
-      <span>{name}</span>:<span>{value}</span>
+      <span>{name}</span><p>{value}</p>
     </div>
   );
 }

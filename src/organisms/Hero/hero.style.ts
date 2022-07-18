@@ -5,6 +5,7 @@ export const HeroContainer = styled.section`
   background-repeat: no-repeat;
   background-size: auto;
   padding-bottom: 100px;
+  position: relative;
   .hero-minitext {
     font-family: "Roboto";
     font-style: normal;

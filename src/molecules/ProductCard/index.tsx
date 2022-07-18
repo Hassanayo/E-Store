@@ -8,9 +8,11 @@ interface CardProps {
   source: string;
   name: string;
   price: number;
+  onClick: () => void
+  
 }
 
-export default function ProductCard({ source, name, price }: CardProps) {
+export default function ProductCard({ source, name, price, onClick }: CardProps) {
   return (
     <ProductcardContainer>
       <div className="product-box">
@@ -23,6 +25,7 @@ export default function ProductCard({ source, name, price }: CardProps) {
           <FlexBox gap="10px">
             <StarratingSmall />
             <p>8 reviews</p>
+            <button onClick={onClick}>+</button>
           </FlexBox>
         </FlexBox>
       </div>

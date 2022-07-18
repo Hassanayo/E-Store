@@ -1,6 +1,7 @@
 import React from "react";
 import { FlexBox } from "../../atoms/Boxes";
 import Button from "../../atoms/Buttons";
+import Megamenu from "../MegaMenu";
 import { HeroContainer } from "./hero.style";
 
 export default function Hero() {
@@ -23,6 +24,7 @@ export default function Hero() {
         </div>
       </FlexBox>
       <div></div>
+      
     </HeroContainer>
   );
 }

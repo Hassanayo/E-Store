@@ -13,7 +13,7 @@ export const StepsContainer = styled.div`
     color: #bebfc4;
   }
   .step-text {
-    color: #bebfc4;
+    color: #000;
     padding: 0 15px;
   }
   .active {
