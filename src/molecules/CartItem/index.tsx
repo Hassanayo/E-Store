@@ -7,7 +7,7 @@ interface CartProps{
     source: string
     price: number
     name: string
-    onDelete?: any
+    onDelete: () => void
     id: number
 }
 

@@ -3,26 +3,22 @@ import { FlexBox } from "../../atoms/Boxes";
 import Property from "../../atoms/Property";
 
 import { CartContextType } from "../../@types/cart";
-import { CartContext, CartContextProvider, useCart } from "../../Context/CartContext";
+import { CartContextProvider, useCart } from "../../Context/CartContext";
 import { useProduct } from "../../Context/ProductContext";
 import Collection from "../../molecules/Collection";
 import ProductCard from "../../molecules/ProductCard";
 import { CatalogContainer } from "./catalog.style";
 
 export default function Catalog() {
-  const Products = useProduct()
-  const {cart, setCart} = useCart()
-  
+  const Products = useProduct();
+  const { cart, setCart } = useCart();
+
   function addToCart(product: any) {
     setCart([...cart, product]);
-    
-    
   }
 
   return (
-    
-      <CatalogContainer>
-        
+    <CatalogContainer>
       <FlexBox flexDirection="column">
         <div className="categories">
           <p>Categories</p>
@@ -51,13 +47,18 @@ export default function Catalog() {
         <div className="product-grid">
           {Products.map((product, index) => {
             return (
-              <ProductCard click={() => addToCart(product)}  key={index} source={product.img} name={product.productname} price={product.amount} id={0}/>
-            )
+              <ProductCard
+                click={() => addToCart(product)}
+                key={index}
+                source={product.img}
+                name={product.productname}
+                price={product.amount}
+                id={0}
+              />
+            );
           })}
         </div>
       </FlexBox>
     </CatalogContainer>
-
-    
   );
 }
