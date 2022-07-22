@@ -1,18 +1,21 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { StarratingSmall } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
+import CircleIcons from "../../atoms/CircleIcons";
 import Price from "../../atoms/Price";
+import colors from "../../theme/colors";
 import { ProductcardContainer } from "./productCard.style";
 
 interface CardProps {
   source: string;
   name: string;
   price: number;
-  onClick: () => void
-  
+  click?: () => void;
+  id: number;
 }
 
-export default function ProductCard({ source, name, price, onClick }: CardProps) {
+export default function ProductCard({ source, name, price, click }: CardProps) {
   return (
     <ProductcardContainer>
       <div className="product-box">
@@ -22,10 +25,17 @@ export default function ProductCard({ source, name, price, onClick }: CardProps)
         <FlexBox flexDirection="column">
           <p>{name}</p>
           <Price price={price} colour="black" />
-          <FlexBox gap="10px">
+          <FlexBox gap="10px" justifyContent="space-between">
             <StarratingSmall />
-            <p>8 reviews</p>
-            <button onClick={onClick}>+</button>
+            <div className="card-fab">
+              <CircleIcons
+                onClick={click}
+                size="26px"
+                colour={colors.brandPrimary}
+              >
+                +
+              </CircleIcons>
+            </div>
           </FlexBox>
         </FlexBox>
       </div>

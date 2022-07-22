@@ -7,9 +7,11 @@ interface CartProps{
     source: string
     price: number
     name: string
+    onDelete: any
+    id: number
 }
 
-export default function CartItem({source, price, name}: CartProps) {
+export default function CartItem({source, price, name, onDelete}: CartProps) {
   return (
     <CartItemContainer>
       <div className="img-box">
@@ -31,6 +33,7 @@ export default function CartItem({source, price, name}: CartProps) {
         <div>
           <p className="cart-detail">Save for later</p>
           <p className="cart-detail">Add to compare</p>
+          <button onClick={onDelete}>-</button>
         </div>
       </FlexBox>
     </CartItemContainer>

@@ -7,9 +7,10 @@ export default function CircleIcons({
   shadow,
   children,
   colour,
+  onClick
 }: FABProps) {
   return (
-    <FAB size={size} shadow={shadow} colour={colour}>
+    <FAB size={size} shadow={shadow} colour={colour} onClick={onClick}>
       {children}
     </FAB>
   );

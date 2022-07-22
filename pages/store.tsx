@@ -1,56 +1,35 @@
-import React, { useState } from "react";
+
+import React, { createContext, useState } from "react";
 import { FlexBox } from "../src/atoms/Boxes";
-import { LayoutWrapper } from "../src/layout/layout.style";
+import Breadcrumbs from "../src/atoms/Breadcrumbs";
+import { useProduct } from "../src/Context/ProductContext";
+import { LayoutStore, LayoutWrapper } from "../src/layout/layout.style";
 import ProductCard from "../src/molecules/ProductCard";
+import Catalog from "../src/organisms/Catalog";
 import Header from "../src/organisms/Header";
 
+
+ 
 export default function Store() {
-    
-    const [products] = useState([
-        {
-            img: "./product1.png",
-            amount: 50,
-            productname: "Cream Bag"
-        },
-        {
-            img: "./product2.png",
-            amount: 50,
-            productname: "Grey Top"
-        },
-        {
-            img: "./product3.png",
-            amount: 50,
-            productname: "Brown Top"
-        },
-        {
-            img: "./product4.png",
-            amount: 100,
-            productname: "White shirt"
-        },
-    ])
-    const [cart, setCart] = useState<any[]>([])
-
-const number = cart.length
+  const [cart, setCart] = useState<any[]>([]);
+   
 
 
-    function addToCart(product: any){
-        setCart([...cart, product])
-        console.log("was added");
-    }
+  function addToCart(product: any) {
+    setCart([...cart, product]);
+  }
+
   return (
     <>
-      <Header number={number} cart={cart} />
-      <div>add to cart ({cart.length})</div>
+        <Header cart={cart} setCart={setCart} />
 
-      <FlexBox></FlexBox>
-      <LayoutWrapper>
-        <FlexBox justifyContent="center" gap="10px">
+        <LayoutStore>
           
-          {products.map((product, index) => (
-            <ProductCard onClick={() => addToCart(product)} key={index} source={product.img} price={product.amount} name={product.productname}/>
-          ))}
-        </FlexBox>
-      </LayoutWrapper>
+          <Breadcrumbs>
+            Home | <span className="span">Pants</span>
+          </Breadcrumbs>
+          <Catalog addToCart={addToCart}/>
+        </LayoutStore>
     </>
   );
 }

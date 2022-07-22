@@ -8,6 +8,7 @@ export interface FABProps {
   black?: boolean;
   hover?: boolean;
   colour?: string;
+  onClick?: () => void
 }
 
 export const FAB = styled.button<FABProps>`
@@ -31,5 +32,8 @@ export const FAB = styled.button<FABProps>`
 
   &:hover {
     border: 5px solid #cff0d8;
+  }
+  :focus{
+    outline: none;
   }
 `;

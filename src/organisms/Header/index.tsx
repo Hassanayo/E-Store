@@ -8,9 +8,9 @@ import ShoppingCart from "../Cart";
 import Megamenu from "../MegaMenu";
 import { HeaderContainer } from "./header.style";
 
-export default function Header({cart, number}: any) {
+export default function Header({cart, deleteFromCart, setCart}: any) {
   const [isOpen, setIsOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(true);
+  const [cartOpen, setCartOpen] = useState(false);
   function openCart() {
     setCartOpen(true);
   }
@@ -53,7 +53,7 @@ export default function Header({cart, number}: any) {
         </FlexBox>
       </FlexBox>
       {isOpen && <Megamenu SetIsOpen={setIsOpen} />}
-      {cartOpen && <ShoppingCart cart={cart} setCartOpen={setCartOpen} />}
+      {cartOpen && <ShoppingCart delete={deleteFromCart} setCart={setCart}  cart={cart} setCartOpen={setCartOpen} />}
     </HeaderContainer>
   );
 }

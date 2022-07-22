@@ -1,29 +1,47 @@
-import React, { useState } from 'react'
-import { Close } from '../../assets/vectors'
-import { FlexBox } from '../../atoms/Boxes'
-import CartItem from '../../molecules/CartItem'
-import { CartContainer } from './cart.style'
-interface ShoppingProps {
-  setCartOpen: any
-  addToCart: any
+import React, { useState } from "react";
+import { Close } from "../../assets/vectors";
+import { FlexBox } from "../../atoms/Boxes";
+import { useProduct } from "../../Context/ProductContext";
+import CartItem from "../../molecules/CartItem";
+import { CartContainer } from "./cart.style";
 
-}
+export default function ShoppingCart({ setCartOpen, cart, setCart }: any) {
+  const Products = useProduct();
 
-export default function ShoppingCart({setCartOpen, cart}: any ) {
+  function handleDelete(id: number) {
+    setCart((prevCart: any[]) => {
+      return prevCart.filter((CartItem: any, index: any) => {
+        return index !== id;
+      });
+    });
+  }
+
   return (
-    <CartContainer >
-        <FlexBox flexDirection='column' gap='15px'>
-          <div className='close-cart' onClick={() => setCartOpen(false)}>
-            <Close colour='black'/>
+    <CartContainer>
+      <div className="cart-content">
+        <FlexBox flexDirection="column" gap="15px">
+          <div className="close-cart" onClick={() => setCartOpen(false)}>
+            <Close colour="black" />
           </div>
-            <p>My Cart</p>
-            <h4>Total Items</h4>
-            {cart?.map((product, index) => (
-              <CartItem key={index} name={product.productname} price={product.price} source={product.img}/>
-            ))}
-            
+          <p>My Cart</p>
+          <h4>Total Items</h4>
+          {cart?.map(
+            (
+              product: { productname: string; price: number; img: string },
+              index: number
+            ) => (
+              <CartItem
+                onDelete={() => handleDelete(index)}
+                id={index}
+                key={index}
+                name={product.productname}
+                price={product.price}
+                source={product.img}
+              />
+            )
+          )}
         </FlexBox>
-
+      </div>
     </CartContainer>
-  )
+  );
 }
