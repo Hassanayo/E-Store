@@ -9,22 +9,19 @@ function useCartContext() {
       productname: string;
     }[]
   >([]);
-  const value = useMemo(
-    () => ({
-      cart,
-      setCart,
-    }),
+  const MemoValue = useMemo(
+    () => ({cart,setCart}),
     [cart, setCart]
   );
-  return value;
+  return MemoValue;
 }
 export type Context = ReturnType<typeof useCartContext>;
 const CartContext = React.createContext<Context | undefined>(undefined);
 CartContext.displayName = "Context";
 
 export const CartContextProvider: React.FC = (props) => {
-  const value = useCartContext();
-  return <CartContext.Provider value={value} {...props} />;
+  const MemoValue = useCartContext();
+  return <CartContext.Provider value={MemoValue} {...props} />;
 };
 export function useCart() {
   const cart = React.useContext(CartContext);
@@ -33,7 +30,3 @@ export function useCart() {
   }
   return cart;
 }
-
-// function addToCart(product: any) {
-//     setCart([...cart, product]);
-//   }

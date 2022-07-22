@@ -19,6 +19,7 @@ export const FAB = styled.button<FABProps>`
   background-color: ${({ colour }) => colour};
   border-radius: 50%;
   border: 0;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +32,7 @@ export const FAB = styled.button<FABProps>`
   color: #ffffff;
 
   &:hover {
-    border: 5px solid #cff0d8;
+    border: 1px solid #cff0d8;
   }
   :focus{
     outline: none;

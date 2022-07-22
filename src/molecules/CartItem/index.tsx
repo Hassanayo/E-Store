@@ -1,7 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { Close } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
+import { FAB } from "../../atoms/CircleIcons/circleIcons.style";
 import Property from "../../atoms/Property";
+import { theme } from "../../theme";
 import { CartItemContainer } from "./cartItem.style";
 interface CartProps{
     source: string
@@ -14,6 +17,9 @@ interface CartProps{
 export default function CartItem({source, price, name, onDelete}: CartProps) {
   return (
     <CartItemContainer>
+      <div className="fab">
+        <FAB onClick={onDelete} size="26px" colour={theme.colors?.brandPrimary}><Close colour="white"/></FAB>
+      </div>
       <div className="img-box">
         <img src={source} alt="" />
       </div>
@@ -33,7 +39,6 @@ export default function CartItem({source, price, name, onDelete}: CartProps) {
         <div>
           <p className="cart-detail">Save for later</p>
           <p className="cart-detail">Add to compare</p>
-          <button onClick={onDelete}>-</button>
         </div>
       </FlexBox>
     </CartItemContainer>

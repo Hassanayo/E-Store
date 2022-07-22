@@ -3,8 +3,15 @@ import styled from "styled-components";
 export const CartItemContainer = styled.div`
   display: flex;
   background: #ffffff;
-  box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+  box-shadow: 5px 1px 35px rgba(168, 172, 176, 0.19);
   padding: 10px;
+  position: relative;
+  .fab{
+    position: absolute;
+    right: -10px;
+    top: 0;
+    
+  }
   .img-box {
     width: 140px;
     height: 200px;
