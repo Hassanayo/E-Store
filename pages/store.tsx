@@ -1,35 +1,27 @@
-
 import React, { createContext, useState } from "react";
 import { FlexBox } from "../src/atoms/Boxes";
 import Breadcrumbs from "../src/atoms/Breadcrumbs";
 import { useProduct } from "../src/Context/ProductContext";
+import LayoutBody from "../src/layout/Layout";
 import { LayoutStore, LayoutWrapper } from "../src/layout/layout.style";
-import ProductCard from "../src/molecules/ProductCard";
 import Catalog from "../src/organisms/Catalog";
-import Header from "../src/organisms/Header";
 
-
- 
 export default function Store() {
-  const [cart, setCart] = useState<any[]>([]);
-   
+  // const [cart, setCart] = useState<{}[]>([]);
+  
 
-
-  function addToCart(product: any) {
-    setCart([...cart, product]);
-  }
+  // function addToCart(product: any) {
+  //   setCart([...cart, product]);
+  // }
 
   return (
-    <>
-        <Header cart={cart} setCart={setCart} />
-
-        <LayoutStore>
-          
-          <Breadcrumbs>
-            Home | <span className="span">Pants</span>
-          </Breadcrumbs>
-          <Catalog addToCart={addToCart}/>
-        </LayoutStore>
-    </>
+    <LayoutBody>
+      <LayoutStore>
+        <Breadcrumbs>
+          Home | <span className="span">Pants</span>
+        </Breadcrumbs>
+        <Catalog />
+      </LayoutStore>
+    </LayoutBody>
   );
 }

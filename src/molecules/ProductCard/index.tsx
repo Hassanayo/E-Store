@@ -11,7 +11,7 @@ interface CardProps {
   source: string;
   name: string;
   price: number;
-  click?: () => void;
+  click?: any;
   id: number;
 }
 

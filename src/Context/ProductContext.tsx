@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react'
-import { products } from '../Products/product'
+import { products } from '../db/product'
 
 const ProductContext = createContext(products)
 

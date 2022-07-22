@@ -1,18 +1,28 @@
 import React, { useContext } from "react";
 import { FlexBox } from "../../atoms/Boxes";
 import Property from "../../atoms/Property";
+
+import { CartContextType } from "../../@types/cart";
+import { CartContext, CartContextProvider, useCart } from "../../Context/CartContext";
 import { useProduct } from "../../Context/ProductContext";
 import Collection from "../../molecules/Collection";
 import ProductCard from "../../molecules/ProductCard";
 import { CatalogContainer } from "./catalog.style";
 
-export default function Catalog({addToCart}: () => void) {
+export default function Catalog() {
   const Products = useProduct()
+  const {cart, setCart} = useCart()
   
-  
+  function addToCart(product: any) {
+    setCart([...cart, product]);
+    
+    
+  }
 
   return (
-    <CatalogContainer>
+    
+      <CatalogContainer>
+        
       <FlexBox flexDirection="column">
         <div className="categories">
           <p>Categories</p>
@@ -47,5 +57,7 @@ export default function Catalog({addToCart}: () => void) {
         </div>
       </FlexBox>
     </CatalogContainer>
+
+    
   );
 }
