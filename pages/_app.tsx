@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyles />
-      <CartContextProvider>
+      <CartContextProvider {...pageProps}>
         <ThemeProvider theme={theme}>
           <Component {...pageProps} />
         </ThemeProvider>

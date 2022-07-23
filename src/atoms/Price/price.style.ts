@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PriceContainer = styled.p<{ colour?: string }>`
+export const PriceContainer = styled.div<{ colour?: string }>`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;

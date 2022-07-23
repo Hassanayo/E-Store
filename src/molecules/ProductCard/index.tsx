@@ -12,7 +12,7 @@ interface CardProps {
   name: string;
   price: number;
   click?: any;
-  id: number;
+  id?: any;
 }
 
 export default function ProductCard({ source, name, price, click }: CardProps) {
