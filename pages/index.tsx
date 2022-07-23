@@ -7,6 +7,7 @@ import Hero from "../src/organisms/Hero";
 import CarouselProducts from "../src/organisms/CarouselProducts";
 import DownloadSection from "../src/organisms/Download";
 import Footer from "../src/organisms/Footer";
+import LayoutBody from "../src/layout/Layout";
 
 export default function Organisms() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,16 +21,15 @@ export default function Organisms() {
 
   return (
     <>
-      <Header />
-      <LayoutWrapper>
+      <LayoutBody>
+
         <Hero />
         <Banner />
         <CallToAction />
         <CarouselProducts />
         <BannerTwo />
         <DownloadSection />
-        <Footer />
-      </LayoutWrapper>
+      </LayoutBody>
     </>
   );
 }

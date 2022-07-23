@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const HeroContainer = styled.section`
   background-image: url("/HeroImage.png");
   background-repeat: no-repeat;
-  background-size: auto;
-  padding-bottom: 100px;
+  background-size: cover;
+  min-height: 584px;
+  margin-bottom: 100px;
   position: relative;
   .hero-minitext {
     font-family: "Roboto";
