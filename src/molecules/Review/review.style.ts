@@ -4,7 +4,8 @@ export const ReviewContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 5px;
-
+    border-top: 1px solid #f1f2f3;
+    padding-top: 20px;
   .review-name {
     font-family: "Playfair Display";
     font-style: normal;

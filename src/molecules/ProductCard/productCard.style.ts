@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const ProductcardContainer = styled.div`
   .product-box {
-    width: fit-content;
+    max-width: 200px;
+    max-height: 384px;
     margin: 0 auto;
     position: relative;
     :hover {
@@ -11,9 +12,7 @@ export const ProductcardContainer = styled.div`
   }
   .product-img {
     height: 326px;
-    img {
-      height: 100%;
-    }
+    
   }
   .card-fab{
     position: absolute;

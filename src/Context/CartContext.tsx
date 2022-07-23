@@ -9,6 +9,9 @@ function useCartContext() {
       productname: string;
     }[]
   >([]);
+  function addToCart(product: any) {
+       setCart([...cart, product]);
+    }
   const MemoValue = useMemo(
     () => ({cart,setCart}),
     [cart, setCart]

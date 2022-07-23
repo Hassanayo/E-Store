@@ -69,18 +69,11 @@ export default function Molecules() {
       {isOpen && <Modal setIsOpen={setIsOpen} />}
 
       <Searchbar />
-      <SearchbarSmall />
-
-
-      
+      <SearchbarSmall /> 
       <Button variant="callToAction" width="100px" height="40px" onClick={() => setIsOpen(true)}>
         Show Notification
       </Button>
       {isOpen && <Notifications setIsOpen={setIsOpen} color={colors.notificationPrimary} />}
-
-
-
-      
       <FlexBox>
       <Review1/>
       <Review1/>

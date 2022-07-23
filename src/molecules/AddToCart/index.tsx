@@ -79,3 +79,8 @@ export function AddToCartAval() {
     </AddToCartContainer>
   );
 }
+export function SizeSelect(){
+  return (
+    <></>
+  )
+}

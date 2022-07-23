@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 import { StarratingSmall } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
@@ -20,7 +21,7 @@ export default function ProductCard({ source, name, price, click }: CardProps) {
     <ProductcardContainer>
       <div className="product-box">
         <div className="product-img">
-          <img className="" src={source} alt="" />
+          <Image layout="responsive" width={300} height={450} className="" src={source} alt="" />
         </div>
         <FlexBox flexDirection="column">
           <p>{name}</p>
