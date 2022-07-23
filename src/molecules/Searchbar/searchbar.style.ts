@@ -56,6 +56,9 @@ export const SearchbarButtonSmall =  styled.button<{white?: boolean}>`
         line-height: 26px;
         color: #A3A5AD;
     }
+    @media (max-width: 1080px){
+        display: none;
+    }
 
 
 `

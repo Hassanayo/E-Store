@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { CartBlack, HeartBlack, PersonIcon } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
-import { Searchbar, SearchbarSmall } from "../../molecules/Searchbar";
+import {  SearchbarSmall } from "../../molecules/Searchbar";
 import ShoppingCart from "../Cart";
 import Megamenu from "../MegaMenu";
 import { HeaderContainer } from "./header.style";
