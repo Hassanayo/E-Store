@@ -14,11 +14,12 @@ interface CardProps {
   price: number;
   click?: any;
   id?: any;
+  clickProduct?: () => void
 }
 
-export default function ProductCard({ source, name, price, click }: CardProps) {
+export default function ProductCard({ source, name, price, click, clickProduct }: CardProps) {
   return (
-    <ProductcardContainer>
+    <ProductcardContainer onClick={clickProduct}>
       <div className="product-box">
         <div className="product-img">
           <Image layout="responsive" width={300} height={450} className="" src={source} alt="" />

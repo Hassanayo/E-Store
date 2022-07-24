@@ -8,10 +8,13 @@ import { useProduct } from "../../Context/ProductContext";
 import Collection from "../../molecules/Collection";
 import ProductCard from "../../molecules/ProductCard";
 import { CatalogContainer } from "./catalog.style";
+import { useRouter } from "next/router";
+import { Routes } from "../../constants/navigation";
 
 export default function Catalog() {
   const Products = useProduct();
   const { cart, setCart } = useCart();
+  const router = useRouter();
 
   function addToCart(product: any) {
     setCart([...cart, product]);
@@ -48,6 +51,7 @@ export default function Catalog() {
           {Products.map((product, index) => {
             return (
               <ProductCard
+                clickProduct={() => {router.push(Routes.store + (product.id))}}
                 click={() => addToCart(product)}
                 key={index}
                 source={product.img}

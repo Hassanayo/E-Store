@@ -15,6 +15,7 @@ export default function Store() {
   // }
 
   return (
+    
     <LayoutBody>
       <LayoutStore>
         <Breadcrumbs>

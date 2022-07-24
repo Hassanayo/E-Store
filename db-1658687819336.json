@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "img": "/product1.png",
+      "amount": 50,
+      "productname": "Cream Bag",
+      "id": 0
+    },
+    {
+      "img": "/product2.png",
+      "amount": 50,
+      "productname": "Grey Top",
+      "id": 1
+    },
+    {
+      "img": "/product3.png",
+      "amount": 50,
+      "productname": "Brown Top",
+      "id": 2
+    },
+    {
+      "img": "/product4.png",
+      "amount": 100,
+      "productname": "White shirt",
+      "id": 3
+    },
+    {
+      "img": "/product4.png",
+      "amount": 100,
+      "productname": "White shirt",
+      "id": 4
+    },
+    {
+      "img": "/product4.png",
+      "amount": 100,
+      "productname": "White shirt",
+      "id": 5
+    }
+  ]
+}

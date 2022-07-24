@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
           <div>
           <h5>SOCIAL</h5>
-          <img src="./socials.png" alt="" />
+          <img src="/socials.png" alt="" />
           </div>
         </FlexBox>
       </FlexBox>

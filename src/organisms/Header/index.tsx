@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { CartBlack, HeartBlack, PersonIcon } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
+import { Routes } from "../../constants/navigation";
 import {  SearchbarSmall } from "../../molecules/Searchbar";
 import ShoppingCart from "../Cart";
 import Megamenu from "../MegaMenu";
@@ -10,6 +12,7 @@ import { HeaderContainer } from "./header.style";
 export default function Header({cart, deleteFromCart, setCart}: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
+  const router = useRouter()
   function openCart() {
     setCartOpen(true);
   }
@@ -25,7 +28,7 @@ export default function Header({cart, deleteFromCart, setCart}: any) {
     <HeaderContainer>
       <FlexBox>
         <FlexBox alignItems="center" gap="80px">
-          <img src="/StoreLogo.png" alt="Logo" />
+          <img onClick={() => router.push(Routes.home)} src="/StoreLogo.png" alt="Logo" />
           <FlexBox>
             <div className="nav-select">
               <FlexBox onClick={openMenu} className="step-box ">

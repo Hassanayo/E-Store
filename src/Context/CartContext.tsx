@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // cartContext.tsx
 import React, { useContext, useMemo, useState } from "react";
 
@@ -13,8 +14,8 @@ function useCartContext() {
        setCart([...cart, product]);
     }
   const MemoValue = useMemo(
-    () => ({cart,setCart}),
-    [cart, setCart]
+    () => ({cart,setCart, addToCart}),
+    [cart, setCart, addToCart]
   );
   return MemoValue;
 }

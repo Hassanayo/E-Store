@@ -5,6 +5,9 @@ import { Selectbox, SelectboxMobile } from "../../atoms/Input/input.style";
 import colors from "../../theme/colors";
 import Alert from "../Alert";
 import { AddToCartContainer } from "./addToCart.style";
+interface ButtonProps{
+  click: () => void
+}
 
 export function AddToCartDefault() {
   return (
@@ -20,7 +23,7 @@ export function AddToCartDefault() {
     </FlexBox>
   );
 }
-export function AddToCartBig() {
+export function AddToCartBig({click} : ButtonProps) {
   return (
     <FlexBox>
       <Selectbox>
@@ -28,7 +31,7 @@ export function AddToCartBig() {
         <option value="">1</option>
         <option value="">1</option>
       </Selectbox>
-      <Button variant="callToAction" width="418px" height="52px">
+      <Button onClick={click} variant="callToAction" width="418px" height="52px">
         ADD TO CART
       </Button>
     </FlexBox>

@@ -1,10 +1,8 @@
 import React, { useContext, useState } from "react";
-import { CartContextType } from "../../@types/cart";
 import { Close } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
 import Button from "../../atoms/Buttons";
 import { useCart } from "../../Context/CartContext";
-import { useProduct } from "../../Context/ProductContext";
 import CartItem from "../../molecules/CartItem";
 import { CartContainer } from "./cart.style";
 
@@ -27,7 +25,7 @@ export default function ShoppingCart({ setCartOpen }: any) {
   console.log(sum);
 
   return (
-    <CartContainer onClick={() => setCartOpen(false)}>
+    <CartContainer >
       <div className="cart-content">
         <div className="sidebar">
           <FlexBox flexDirection="column" gap="15px">
