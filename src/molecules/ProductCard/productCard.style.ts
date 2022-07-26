@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ProductcardContainer = styled.div`
+
   .product-box {
     max-width: 200px;
     max-height: 384px;

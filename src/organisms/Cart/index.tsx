@@ -5,9 +5,10 @@ import Button from "../../atoms/Buttons";
 import { useCart } from "../../Context/CartContext";
 import CartItem from "../../molecules/CartItem";
 import { CartContainer } from "./cart.style";
+import axios from "../../db/instance";
 
 export default function ShoppingCart({ setCartOpen }: any) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const { cart, setCart } = useCart();
   let sum = 0;
 
@@ -22,10 +23,18 @@ export default function ShoppingCart({ setCartOpen }: any) {
   cart.forEach((i) => {
     return (sum += i.amount);
   });
-  console.log(sum);
+
+  // send purchase to backend
+  
+  function handlePurchase() {
+    const order = cart;
+    axios.post("/orders.json", order)
+      .then((res: any) => console.log(res))
+      .catch((err: any) => console.log(err));
+  }
 
   return (
-    <CartContainer >
+    <CartContainer>
       <div className="cart-content">
         <div className="sidebar">
           <FlexBox flexDirection="column" gap="15px">
@@ -53,7 +62,9 @@ export default function ShoppingCart({ setCartOpen }: any) {
             <p className="total">Total</p>
             <p className="price">${sum}</p>
           </FlexBox>
-          <Button height="52px">Checkout</Button>
+          <Button onClick={handlePurchase} height="52px">
+            Checkout
+          </Button>
         </div>
       </div>
     </CartContainer>

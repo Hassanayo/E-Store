@@ -6,22 +6,22 @@ import LayoutBody from "../../src/layout/Layout";
 import { LayoutStore, LayoutWrapper } from "../../src/layout/layout.style";
 import Catalog from "../../src/organisms/Catalog";
 
-export default function Store() {
-  // const [cart, setCart] = useState<{}[]>([]);
-  
+export async function getStaticProps() {
+  const res = await fetch('https://storefront-844a2-default-rtdb.firebaseio.com/products.json')
+  const data = await res.json()
 
-  // function addToCart(product: any) {
-  //   setCart([...cart, product]);
-  // }
-
+  return {
+    props: {products: data}
+  }
+}
+export default function Store({products}: any) {
   return (
-    
     <LayoutBody>
       <LayoutStore>
         <Breadcrumbs>
           Home | <span className="span">Pants</span>
         </Breadcrumbs>
-        <Catalog />
+        <Catalog products={products} />
       </LayoutStore>
     </LayoutBody>
   );

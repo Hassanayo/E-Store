@@ -17,9 +17,9 @@ interface CardProps {
   clickProduct?: () => void
 }
 
-export default function ProductCard({ source, name, price, click, clickProduct }: CardProps) {
+export default function ProductCard({ source, name, price, click }: CardProps) {
   return (
-    <ProductcardContainer onClick={clickProduct}>
+    <ProductcardContainer >
       <div className="product-box">
         <div className="product-img">
           <Image layout="responsive" width={300} height={450} className="" src={source} alt="" />

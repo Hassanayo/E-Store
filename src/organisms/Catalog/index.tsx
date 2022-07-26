@@ -10,9 +10,9 @@ import ProductCard from "../../molecules/ProductCard";
 import { CatalogContainer } from "./catalog.style";
 import { useRouter } from "next/router";
 import { Routes } from "../../constants/navigation";
+import Link from "next/link";
 
-export default function Catalog() {
-  const Products = useProduct();
+export default function Catalog({ products }: any) {
   const { cart, setCart } = useCart();
   const router = useRouter();
 
@@ -48,19 +48,32 @@ export default function Catalog() {
           </FlexBox>
         </div>
         <div className="product-grid">
-          {Products.map((product, index) => {
-            return (
-              <ProductCard
-                clickProduct={() => {router.push(Routes.store + (product.id))}}
-                click={() => addToCart(product)}
-                key={index}
-                source={product.img}
-                name={product.productname}
-                price={product.amount}
-                id={0}
-              />
-            );
-          })}
+          {products.map(
+            (
+              product: {
+                id: any;
+                img: string;
+                productname: string;
+                amount: number;
+              },
+              index: React.Key | null | undefined
+            ) => {
+              return (
+                <Link key={product.id} href={"/store/" + product.id}>
+                  <a>
+                    <ProductCard
+                      click={() => addToCart(product)}
+                      key={index}
+                      source={product.img}
+                      name={product.productname}
+                      price={product.amount}
+                      id={products.id}
+                    />
+                  </a>
+                </Link>
+              );
+            }
+          )}
         </div>
       </FlexBox>
     </CatalogContainer>
