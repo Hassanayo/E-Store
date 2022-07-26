@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { FlexBox } from "../../atoms/Boxes";
 import Property from "../../atoms/Property";
 
@@ -9,10 +9,10 @@ import Collection from "../../molecules/Collection";
 import ProductCard from "../../molecules/ProductCard";
 import { CatalogContainer } from "./catalog.style";
 import { useRouter } from "next/router";
-import { Routes } from "../../constants/navigation";
 import Link from "next/link";
 
-export default function Catalog({ products }: any) {
+export default function Catalog() {
+  const products = useProduct()
   const { cart, setCart } = useCart();
   const router = useRouter();
 
@@ -47,8 +47,9 @@ export default function Catalog({ products }: any) {
             <div>View all</div>
           </FlexBox>
         </div>
+        
         <div className="product-grid">
-          {products.map(
+          {products && products.map(
             (
               product: {
                 id: any;
@@ -67,7 +68,7 @@ export default function Catalog({ products }: any) {
                       source={product.img}
                       name={product.productname}
                       price={product.amount}
-                      id={products.id}
+                      id={product.id}
                     />
                   </a>
                 </Link>

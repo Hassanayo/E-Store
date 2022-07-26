@@ -68,7 +68,7 @@ export default function ProductPage({ products }: any) {
               style={{ paddingBottom: "20px" }}
             >
               <Select>
-                <option value="" disabled selected hidden>
+                <option value="" disabled defaultValue={""} hidden>
                   Size
                 </option>
                 <option value="xs">XS</option>
@@ -76,7 +76,7 @@ export default function ProductPage({ products }: any) {
                 <option value="lg">LG</option>
               </Select>
               <Select>
-                <option value="" disabled selected hidden>
+                <option value="" disabled defaultValue={""} hidden>
                   Lightgrey
                 </option>
                 <option value="xs">Blue</option>

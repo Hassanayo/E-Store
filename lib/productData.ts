@@ -1,13 +1,25 @@
+import { useState } from "react";
+
 export async function ProductsData() {
-    const res = await fetch('http://localhost:8000/products')
-    const data = await res.json()
-
-    return data
+    const [isPending, setIsPending] = useState(true)
+    const res = await fetch(
+        "https://storefront-844a2-default-rtdb.firebaseio.com/products.json"
+      )
+        .then((res) => {
+            setIsPending(false)
+          return res.json();
+          
+        })
+        .then((data) => {
+          return data;
+        })
+        .catch((err) => {
+          console.log(err)
+          throw new Error("an error occured");
+          
+          
+        });
+        return {
+            props: { products: res },
+          };
 }
-async function fetchData() {
-    const res = await fetch("http://localhost:8000/products");
-    const data = await res.json();
-    console.log(data);
-
-    return data
-  }
