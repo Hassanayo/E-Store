@@ -26,15 +26,15 @@
             "id": 3
           },
           {
-            "img": "/product4.png",
+            "img": "/product5.png",
             "amount": 100,
-            "productname": "White shirt",
+            "productname": "Necklace",
             "id": 4
           },
           {
-            "img": "/product4.png",
+            "img": "/product6.png",
             "amount": 100,
-            "productname": "White shirt",
+            "productname": "Grey Sweater",
             "id": 5
           }
     ],

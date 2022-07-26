@@ -1,10 +1,12 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { FlexBox } from "../../atoms/Boxes";
 import Button from "../../atoms/Buttons";
-import Megamenu from "../MegaMenu";
+import { Routes } from "../../constants/navigation";
 import { HeroContainer } from "./hero.style";
 
 export default function Hero() {
+  const router = useRouter()
   return (
     <HeroContainer>
       <FlexBox className="hero-content" flexDirection="column">
@@ -18,7 +20,7 @@ export default function Hero() {
           </h1>
         </div>
         <div className="hero-btn">
-          <Button variant="callToAction" width="172px" height="51px">
+          <Button onClick={() => router.push(Routes.store)} variant="callToAction" width="172px" height="51px">
             LEARN MORE
           </Button>
         </div>

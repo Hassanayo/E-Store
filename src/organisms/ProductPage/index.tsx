@@ -44,7 +44,7 @@ export default function ProductPage({ products }: any) {
           <div>
             <p className="product-name">{products.productname}</p>
             <FlexBox justifyContent="space-between">
-              <p className="product-price">${50}</p>
+              <p className="product-price">${products.amount}</p>
               <FlexBox alignItems="end">
                 <StarratingSmall />
                 <p className="reviews">Read all 28 review</p>

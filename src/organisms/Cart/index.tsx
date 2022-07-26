@@ -8,7 +8,6 @@ import { CartContainer } from "./cart.style";
 import axios from "../../db/instance";
 
 export default function ShoppingCart({ setCartOpen }: any) {
-  const [isOpen, setIsOpen] = useState(false);
   const { cart, setCart } = useCart();
   let sum = 0;
 

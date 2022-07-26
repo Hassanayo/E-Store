@@ -4,15 +4,15 @@ import React, { useEffect, useState } from "react";
 import { CartBlack, HeartBlack, PersonIcon } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
 import { Routes } from "../../constants/navigation";
-import {  SearchbarSmall } from "../../molecules/Searchbar";
+import { SearchbarSmall } from "../../molecules/Searchbar";
 import ShoppingCart from "../Cart";
 import Megamenu from "../MegaMenu";
 import { HeaderContainer } from "./header.style";
 
-export default function Header({cart, deleteFromCart, setCart}: any) {
+export default function Header({ cart, deleteFromCart, setCart }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
   function openCart() {
     setCartOpen(true);
   }
@@ -22,13 +22,21 @@ export default function Header({cart, deleteFromCart, setCart}: any) {
   useEffect(() => {
     isOpen && (document.documentElement.style.overflow = "hidden");
     !isOpen && (document.documentElement.style.overflow = "");
-  }, [isOpen]);
+    cartOpen && (document.documentElement.style.overflow = "hidden");
+    !cartOpen && (document.documentElement.style.overflow = "");
+  }, [isOpen, cartOpen]);
 
   return (
     <HeaderContainer>
       <FlexBox>
         <FlexBox alignItems="center" gap="80px">
-          <img onClick={() => router.push(Routes.home)} src="/StoreLogo.png" alt="Logo" />
+          <div style={{ cursor: "pointer" }}>
+            <img
+              onClick={() => router.push(Routes.home)}
+              src="/StoreLogo.png"
+              alt="Logo"
+            />
+          </div>
           <FlexBox>
             <div className="nav-select">
               <FlexBox onClick={openMenu} className="step-box ">
@@ -55,7 +63,14 @@ export default function Header({cart, deleteFromCart, setCart}: any) {
         </FlexBox>
       </FlexBox>
       {isOpen && <Megamenu SetIsOpen={setIsOpen} />}
-      {cartOpen && <ShoppingCart delete={deleteFromCart} setCart={setCart}  cart={cart} setCartOpen={setCartOpen} />}
+      {cartOpen && (
+        <ShoppingCart
+          delete={deleteFromCart}
+          setCart={setCart}
+          cart={cart}
+          setCartOpen={setCartOpen}
+        />
+      )}
     </HeaderContainer>
   );
 }
