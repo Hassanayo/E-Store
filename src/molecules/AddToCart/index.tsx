@@ -6,7 +6,7 @@ import colors from "../../theme/colors";
 import Alert from "../Alert";
 import { AddToCartContainer } from "./addToCart.style";
 interface ButtonProps{
-  click: () => void
+  click?: () => void
 }
 
 export function AddToCartDefault() {
