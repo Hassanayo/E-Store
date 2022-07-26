@@ -5,7 +5,7 @@ export const CartContainer = styled.div`
   background: rgba(0, 0, 0, 0.2);
   box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
   position: absolute;
-  height: 100vh;
+  min-height: 100vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -82,5 +82,13 @@ export const CartContainer = styled.div`
     font-size: 24px;
     line-height: 34px;
     color: #1d1f22;
+  }
+  .total-items{
+    position: relative;
+    right: 65px;
+  }
+  .close-cart{
+    position: absolute;
+    right: 40px;
   }
 `;

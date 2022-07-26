@@ -42,14 +42,13 @@ export default function Catalog() {
           </FlexBox>
           <FlexBox>
             <div>
-              <Property name="Products found: " value="280" />
+              <Property name="Products found: " value={products.length} />
             </div>
-            <div>View all</div>
           </FlexBox>
         </div>
         
         <div className="product-grid">
-          {products && products.map(
+          {products.map(
             (
               product: {
                 id: any;
@@ -60,8 +59,7 @@ export default function Catalog() {
               index: React.Key | null | undefined
             ) => {
               return (
-                <Link key={product.id} href={"/store/" + product.id}>
-                  <a>
+                
                     <ProductCard
                       click={() => addToCart(product)}
                       key={index}
@@ -70,8 +68,6 @@ export default function Catalog() {
                       price={product.amount}
                       id={product.id}
                     />
-                  </a>
-                </Link>
               );
             }
           )}

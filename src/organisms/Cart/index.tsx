@@ -6,6 +6,8 @@ import { useCart } from "../../Context/CartContext";
 import CartItem from "../../molecules/CartItem";
 import { CartContainer } from "./cart.style";
 import axios from "../../db/instance";
+import CircleIcons from "../../atoms/CircleIcons";
+import colors from "../../theme/colors";
 
 export default function ShoppingCart({ setCartOpen }: any) {
   const { cart, setCart } = useCart();
@@ -41,7 +43,11 @@ export default function ShoppingCart({ setCartOpen }: any) {
               <Close colour="black" />
             </div>
             <p>My Cart</p>
-            <h4>Total Items</h4>
+            
+            <FlexBox alignItems="center" gap="10px" className="total-items">
+              <CircleIcons size="46px" colour={colors.brandPrimary}>{cart.length}</CircleIcons>
+              <h4>Total Items</h4>
+            </FlexBox>
             <div className="cart-items">
               {cart.map((product, index) => {
                 return (
@@ -61,7 +67,7 @@ export default function ShoppingCart({ setCartOpen }: any) {
             <p className="total">Total</p>
             <p className="price">${sum}</p>
           </FlexBox>
-          <Button onClick={handlePurchase} height="52px">
+          <Button onClick={handlePurchase} height="54px">
             Checkout
           </Button>
         </div>
