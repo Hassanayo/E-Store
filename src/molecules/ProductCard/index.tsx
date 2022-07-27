@@ -28,23 +28,28 @@ export default function ProductCard({
   click,
   id,
 }: CardProps) {
-  const router = useRouter()
+  
+  const router = useRouter();
   return (
     <ProductcardContainer>
       <div className="product-box">
-        
-          <div className="product-img" onClick={() => router.push(Routes.store + id)} >
-            <Image
-              layout="responsive"
-              width={300}
-              height={450}
-              className=""
-              src={source}
-              alt=""
-            />
-          </div>
-          <div className="hit"><BrandHit/></div>
-          
+        <div
+          className="product-img"
+          onClick={() => router.push(Routes.store + id)}
+        >
+          <Image
+            layout="responsive"
+            width={300}
+            height={450}
+            className=""
+            src={source}
+            alt=""
+          />
+        </div>
+        <div className="hit">
+          <BrandHit />
+        </div>
+
         <FlexBox flexDirection="column">
           <p>{name}</p>
           <Price price={price} colour="black" discount={price * 2} />

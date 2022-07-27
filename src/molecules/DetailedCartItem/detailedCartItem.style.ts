@@ -5,10 +5,9 @@ export const DetailedCartItemContainer = styled.div`
   gap: 60px;
   border-top: 1 px solid #f1f2f3;
   border-bottom: 1px solid #f1f2f3;
-  padding: 40px 0;
+  padding: 40px 20px;
   position: relative;
   max-height: 280px;
-  overflow: auto;
   
   .ship-details {
     max-width: 279px;

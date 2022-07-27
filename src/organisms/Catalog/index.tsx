@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FlexBox } from "../../atoms/Boxes";
 import Property from "../../atoms/Property";
 
@@ -10,14 +10,20 @@ import ProductCard from "../../molecules/ProductCard";
 import { CatalogContainer } from "./catalog.style";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Notifications from "../../molecules/Notification";
+import colors from "../../theme/colors";
 
 export default function Catalog() {
   const products = useProduct()
   const { cart, setCart } = useCart();
+  const [alert, setAlert] = useState(false)
   const router = useRouter();
-
+  
+  
   function addToCart(product: any) {
     setCart([...cart, product]);
+    setAlert(true)
+
   }
 
   return (
@@ -71,6 +77,7 @@ export default function Catalog() {
               );
             }
           )}
+          {alert && <Notifications setIsOpen={setAlert} color={colors.notificationPrimary}/>}
         </div>
       </FlexBox>
     </CatalogContainer>

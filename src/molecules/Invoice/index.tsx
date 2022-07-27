@@ -3,8 +3,17 @@ import { Mail } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
 import Button from "../../atoms/Buttons";
 import { InvoiceContainer } from "./invoice.style";
+import axios from "../../db/instance"
 
 export default function Invoice({cart}: any) {
+  // send purchase to backend
+  
+  function handlePurchase() {
+    const order = cart;
+    axios.post("/orders.json", order)
+      .then((res: any) => console.log(res))
+      .catch((err: any) => console.log(err));
+  }
   let sum = 0
   cart.forEach((i: any) => {
     return (sum += i.amount);
@@ -30,7 +39,7 @@ export default function Invoice({cart}: any) {
         <p>TOTAL</p>
         <p>$ {sum}</p>
       </FlexBox>
-      <Button variant="callToAction" width="269px" height="52px">
+      <Button onClick={handlePurchase} variant="callToAction" width="269px" height="52px">
         Go to Checkout
       </Button>
       <FlexBox gap="10px" alignItems="center">

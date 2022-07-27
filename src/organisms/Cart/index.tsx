@@ -8,18 +8,15 @@ import { CartContainer } from "./cart.style";
 import axios from "../../db/instance";
 import CircleIcons from "../../atoms/CircleIcons";
 import colors from "../../theme/colors";
+import { useRouter } from "next/router";
+import { Routes } from "../../constants/navigation";
 
 export default function ShoppingCart({ setCartOpen }: any) {
-  const { cart, setCart } = useCart();
+  const { cart, handleDelete } = useCart();
+  const router = useRouter()
   let sum = 0;
 
-  function handleDelete(id: number) {
-    setCart((prevCart: any[]) => {
-      return prevCart.filter((CartItem: any, index: any) => {
-        return index !== id;
-      });
-    });
-  }
+  
 
   cart.forEach((i) => {
     return (sum += i.amount);
@@ -67,7 +64,7 @@ export default function ShoppingCart({ setCartOpen }: any) {
             <p className="total">Total</p>
             <p className="price">${sum}</p>
           </FlexBox>
-          <Button onClick={handlePurchase} height="54px">
+          <Button onClick={() => router.push(Routes.detailedCart)} height="54px">
             Checkout
           </Button>
         </div>

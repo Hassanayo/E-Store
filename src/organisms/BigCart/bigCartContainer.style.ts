@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const BigCartContainer = styled.div`
   max-height: 200vh;
+  overflow: auto;
   ::-webkit-scrollbar {
     width: 2px;
     height: 4px;
