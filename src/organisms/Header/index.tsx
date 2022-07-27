@@ -4,12 +4,13 @@ import React, { useEffect, useState } from "react";
 import { CartBlack, HeartBlack, PersonIcon } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
 import { Routes } from "../../constants/navigation";
+import { useCart } from "../../Context/CartContext";
 import { SearchbarSmall } from "../../molecules/Searchbar";
 import ShoppingCart from "../Cart";
 import Megamenu from "../MegaMenu";
 import { HeaderContainer } from "./header.style";
 
-export default function Header({ cart, deleteFromCart, setCart }: any) {
+export default function Header({ deleteFromCart }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const router = useRouter();
@@ -55,7 +56,9 @@ export default function Header({ cart, deleteFromCart, setCart }: any) {
       <FlexBox alignItems="center" gap="40px">
         <SearchbarSmall />
         <FlexBox gap="30px">
-          <PersonIcon />
+          <div onClick={() => router.push(Routes.detailedCart)}>
+            <PersonIcon />
+          </div>
           <HeartBlack />
           <div onClick={openCart}>
             <CartBlack />
@@ -64,12 +67,7 @@ export default function Header({ cart, deleteFromCart, setCart }: any) {
       </FlexBox>
       {isOpen && <Megamenu SetIsOpen={setIsOpen} />}
       {cartOpen && (
-        <ShoppingCart
-          delete={deleteFromCart}
-          setCart={setCart}
-          cart={cart}
-          setCartOpen={setCartOpen}
-        />
+        <ShoppingCart delete={deleteFromCart} setCartOpen={setCartOpen} />
       )}
     </HeaderContainer>
   );

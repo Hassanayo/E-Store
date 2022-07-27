@@ -20,18 +20,20 @@ export default function ProductTab() {
   }
   return (
     <ProductTabContainer>
-      <FlexBox gap="20px">
+      <FlexBox justifyContent="space-between">
         {steps.map((step, index) => {
           return (
-            <h3
+            <div
+            className="tab-box"
               onClick={() => handleCurrentIndex(index)}
               key={index}
               style={{
                 color: `${currentIndex == index ? "black" : "#A3A5AD"}`,
+                borderBottom: `${currentIndex == index ? "2px solid black" : ""}`
               }}
             >
-              {step}
-            </h3>
+              <h3>{step}</h3>
+            </div>
           );
         })}
       </FlexBox>

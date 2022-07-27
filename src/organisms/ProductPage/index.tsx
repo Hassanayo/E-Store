@@ -10,7 +10,6 @@ import { useCart } from "../../Context/CartContext";
 import { useProduct } from "../../Context/ProductContext";
 
 export default function ProductPage({ products }: any) {
-  const Product = useProduct();
   const { addToCart } = useCart();
   // const router = useRouter();
   // const route = router.asPath;
@@ -45,9 +44,9 @@ export default function ProductPage({ products }: any) {
             <p className="product-name">{products.productname}</p>
             <FlexBox justifyContent="space-between">
               <p className="product-price">${products.amount}</p>
-              <FlexBox alignItems="end">
+              <FlexBox alignItems="end" gap="10px">
                 <StarratingSmall />
-                <p className="reviews">Read all 28 review</p>
+                <p className="reviews">Read all reviews</p>
               </FlexBox>
             </FlexBox>
             <div className="product-details">

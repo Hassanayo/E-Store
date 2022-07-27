@@ -1,12 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { StarratingSmall } from "../../assets/vectors";
 import { BrandHit } from "../../atoms/Badge";
 import { FlexBox } from "../../atoms/Boxes";
 import CircleIcons from "../../atoms/CircleIcons";
 import Price from "../../atoms/Price";
+import { Routes } from "../../constants/navigation";
 import colors from "../../theme/colors";
 import { ProductcardContainer } from "./productCard.style";
 
@@ -26,11 +28,12 @@ export default function ProductCard({
   click,
   id,
 }: CardProps) {
+  const router = useRouter()
   return (
     <ProductcardContainer>
       <div className="product-box">
-        <a href={"/store/" + id}>
-          <div className="product-img">
+        
+          <div className="product-img" onClick={() => router.push(Routes.store + id)} >
             <Image
               layout="responsive"
               width={300}
@@ -42,7 +45,6 @@ export default function ProductCard({
           </div>
           <div className="hit"><BrandHit/></div>
           
-        </a>
         <FlexBox flexDirection="column">
           <p>{name}</p>
           <Price price={price} colour="black" discount={price * 2} />

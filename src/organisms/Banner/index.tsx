@@ -60,15 +60,22 @@ export default function Banner() {
 export function BannerTwo() {
   return (
     <BannerContainer>
-      <FlexBox className="title-box" flexDirection="column" justifyContent="center">
+      <FlexBox
+        className="title-box"
+        flexDirection="column"
+        justifyContent="center"
+      >
         <p className="b2-title">Share Your Look</p>
         <p className="hashtag">#YOURLOOK</p>
       </FlexBox>
       <FlexBox justifyContent="center" gap="20px">
-        <div><img src="./yourlook1.png" alt="" /></div>
-        <div><img src="./yourlook2.png" alt="" /></div>
+        <div>
+          <img src="./yourlook1.png" alt="" />
+        </div>
+        <div>
+          <img src="./yourlook2.png" alt="" />
+        </div>
       </FlexBox>
-
     </BannerContainer>
   );
 }
