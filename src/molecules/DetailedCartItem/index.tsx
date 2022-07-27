@@ -2,22 +2,17 @@
 import React from "react";
 import { Close } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
-import { FAB } from "../../atoms/CircleIcons/circleIcons.style";
 import Property from "../../atoms/Property";
-import { useCart } from "../../Context/CartContext";
-import { theme } from "../../theme";
-import CartItem from "../CartItem";
-import { CartItemContainer } from "../CartItem/cartItem.style";
+import { CartProps } from "../CartItem";
 import { DetailedCartItemContainer } from "./detailedCartItem.style";
 
-export default function DetailedCartItem() {
-  const { cart } = useCart();
+export default function DetailedCartItem({source, price, name, onDelete, id} : CartProps) {
   return (
     <DetailedCartItemContainer>
-      <div>
-        <CartItemContainer>
+      <div> 
+        <div className="detailed-container">
           <div className="img-box">
-            <img src="/product5.png" alt="" />
+            <img src={source} alt="" />
           </div>
 
           <FlexBox
@@ -26,19 +21,28 @@ export default function DetailedCartItem() {
             justifyContent="space-between"
           >
             <div>
-              <p className="product-name">Cream Bag</p>
-              <p className="price">$ {50}</p>
+              <p className="product-name">{name}</p>
+              <p className="price">$ {price}</p>
               <div className="property-box">
-                <Property name="Size:" value="XS" />
+                <Property name="Size: " value="XS" />
               </div>
             </div>
             <div className="ship-details">
                 <p>Usually arrives in 5-13 business days. A shipping timeline specific to your destination can be viewed in Checkout.</p>
             </div>
           </FlexBox>
-        </CartItemContainer>
+        </div>
       </div>
-      <div></div>
+      <div className="text-container">
+        <p>Edit</p>
+        <p>Save for later</p>
+        <p>Add to compare</p>
+        <p>Add message or gift wrap</p>
+      </div>
+      <FlexBox onClick={onDelete} style={{cursor: "pointer"}} alignItems="center">
+        <Close  colour="black"/>
+      </FlexBox>
     </DetailedCartItemContainer>
   );
 }
+

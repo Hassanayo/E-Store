@@ -6,7 +6,7 @@ import { FAB } from "../../atoms/CircleIcons/circleIcons.style";
 import Property from "../../atoms/Property";
 import { theme } from "../../theme";
 import { CartItemContainer } from "./cartItem.style";
-interface CartProps{
+export interface CartProps{
     source: string
     price: number
     name: string

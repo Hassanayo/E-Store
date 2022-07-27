@@ -6,11 +6,10 @@ export const CartItemContainer = styled.div`
   box-shadow: 5px 1px 35px rgba(168, 172, 176, 0.19);
   padding: 10px;
   position: relative;
-  .fab{
+  .fab {
     position: absolute;
     right: -10px;
     top: 0;
-    
   }
   .img-box {
     width: 140px;
@@ -70,4 +69,5 @@ export const CartItemContainer = styled.div`
       color: #a3a5ad;
     }
   }
+  
 `;
