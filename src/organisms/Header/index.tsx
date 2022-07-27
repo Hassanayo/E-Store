@@ -56,11 +56,11 @@ export default function Header({ deleteFromCart }: any) {
       <FlexBox alignItems="center" gap="40px">
         <SearchbarSmall />
         <FlexBox gap="30px">
-          <div onClick={() => router.push(Routes.detailedCart)}>
+          <div style={{cursor: "pointer"}} onClick={() => router.push(Routes.detailedCart)}>
             <PersonIcon />
           </div>
           <HeartBlack />
-          <div onClick={openCart}>
+          <div style={{cursor: "pointer"}} onClick={openCart}>
             <CartBlack />
           </div>
         </FlexBox>

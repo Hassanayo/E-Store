@@ -5,17 +5,21 @@ import Button from "../../atoms/Buttons";
 import { InvoiceContainer } from "./invoice.style";
 
 export default function Invoice({cart}: any) {
+  let sum = 0
+  cart.forEach((i: any) => {
+    return (sum += i.amount);
+  });
   return (
     <InvoiceContainer>
       <h5 className="i-heading">Totals</h5>
       <div className="total-details">
         <div>
           <p className="property">Products</p>
-          <p className="value">3</p>
+          <p className="value">{cart.length}</p>
         </div>
         <div>
           <p className="property">Subtotal</p>
-          <p className="value">$ 150.00</p>
+          <p className="value">$ {sum}</p>
         </div>
         <div>
           <p className="property">Shipping</p>
@@ -24,7 +28,7 @@ export default function Invoice({cart}: any) {
       </div>
       <FlexBox className="total-p" justifyContent="space-between">
         <p>TOTAL</p>
-        <p>$ 150.00</p>
+        <p>$ {sum}</p>
       </FlexBox>
       <Button variant="callToAction" width="269px" height="52px">
         Go to Checkout
