@@ -14,7 +14,7 @@ export default function Notifications({ color, setIsOpen }: NotificationProps) {
     setTimeout(() => {
        setShowElement(false);
        setIsOpen(false);
-    }, 500);
+    }, 1000);
  }, [setIsOpen]);
   return (
     <NotificationContainer color={color}>

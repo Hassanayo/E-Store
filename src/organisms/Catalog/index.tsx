@@ -3,8 +3,8 @@ import { FlexBox } from "../../atoms/Boxes";
 import Property from "../../atoms/Property";
 
 import { CartContextType } from "../../@types/cart";
-import { CartContextProvider, useCart } from "../../Context/CartContext";
-import { useProduct } from "../../Context/ProductContext";
+import { CartContextProvider, useCart } from "../../context/CartContext";
+import { useProduct } from "../../context/ProductContext";
 import Collection from "../../molecules/Collection";
 import ProductCard from "../../molecules/ProductCard";
 import { CatalogContainer } from "./catalog.style";

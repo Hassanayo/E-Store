@@ -1,6 +1,6 @@
 import React from "react";
 import { FlexBox } from "../../src/atoms/Boxes";
-import { useCart } from "../../src/Context/CartContext";
+import { useCart } from "../../src/context/CartContext";
 import LayoutBody from "../../src/layout/Layout";
 import CartItem from "../../src/molecules/CartItem";
 import DetailedCartItem from "../../src/molecules/DetailedCartItem";
