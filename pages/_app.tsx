@@ -9,13 +9,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyles />
-      <ViewportProvider>
-        <CartContextProvider {...pageProps}>
+      <CartContextProvider {...pageProps}>
+        <ViewportProvider>
           <ThemeProvider theme={theme}>
             <Component {...pageProps} />
           </ThemeProvider>
-        </CartContextProvider>
-      </ViewportProvider>
+        </ViewportProvider>
+      </CartContextProvider>
     </>
   );
 }

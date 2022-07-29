@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 // cartContext.tsx
-import React, { useContext, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 
 function useCartContext() {
   const [cart, setCart] = useState<
