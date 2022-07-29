@@ -4,6 +4,7 @@ export const HeroContainer = styled.section`
   background-image: url("/HeroImage.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   min-height: 584px;
   margin-bottom: 100px;
   position: relative;
@@ -32,7 +33,8 @@ export const HeroContainer = styled.section`
     font-size: 36px;
     line-height: 48px;
     color: #1D1F22;
-    padding: 80px 500px 60px 0;
+    max-width: 500px;
+    padding: 80px 0 60px 0;
   }
   .hero-btn{
     padding-left: 50px;

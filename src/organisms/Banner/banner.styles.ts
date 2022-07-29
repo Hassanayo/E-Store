@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const BannerContainer = styled.div`
   padding-bottom: 100px;
-
   .banner-header {
     font-family: "Playfair Display";
     font-style: normal;
@@ -33,6 +32,9 @@ export const BannerContainer = styled.div`
   }
   .banner-box {
     padding: 60px 80px 0 80px;
+    background-image: url("/long-banner.png");
+    background-position: center;
+    
   }
   .two-col {
     display: grid;
@@ -62,5 +64,11 @@ export const BannerContainer = styled.div`
     line-height: 29px;
     text-align: center;
     color: #000000;
+  }
+  .yl-box{
+    max-width: 470px;
+    img{
+      width: 100%;
+    }
   }
 `;

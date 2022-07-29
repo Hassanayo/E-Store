@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
+import Image from "next/image";
 import React from "react";
 import { FlexBox } from "../../atoms/Boxes";
 import Button from "../../atoms/Buttons";
@@ -10,10 +11,7 @@ export default function Banner() {
   return (
     <BannerContainer>
       <GridBox grid="banner">
-        <div
-          className="banner-box"
-          style={{ backgroundImage: `url("./long-banner.png")` }}
-        >
+        <div className="banner-box">
           <p className="banner-title">Scarves</p>
           <h3 className="banner-header">COCKTAIL & PARTY</h3>
           <p className="banner-details">
@@ -69,10 +67,10 @@ export function BannerTwo() {
         <p className="hashtag">#YOURLOOK</p>
       </FlexBox>
       <FlexBox justifyContent="center" gap="20px">
-        <div>
+        <div className="yl-box">
           <img src="./yourlook1.png" alt="" />
         </div>
-        <div>
+        <div className="yl-box">
           <img src="./yourlook2.png" alt="" />
         </div>
       </FlexBox>

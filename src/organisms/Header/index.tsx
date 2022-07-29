@@ -30,7 +30,7 @@ export default function Header({ deleteFromCart }: any) {
   return (
     <HeaderContainer>
       <FlexBox>
-        <FlexBox alignItems="center" gap="80px">
+        <FlexBox alignItems="center" gap="50px">
           <div style={{ cursor: "pointer" }}>
             <img
               onClick={() => router.push(Routes.home)}
@@ -56,11 +56,14 @@ export default function Header({ deleteFromCart }: any) {
       <FlexBox alignItems="center" gap="40px">
         <SearchbarSmall />
         <FlexBox gap="30px">
-          <div style={{cursor: "pointer"}} onClick={() => router.push(Routes.detailedCart)}>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => router.push(Routes.detailedCart)}
+          >
             <PersonIcon />
           </div>
           <HeartBlack />
-          <div style={{cursor: "pointer"}} onClick={openCart}>
+          <div style={{ cursor: "pointer" }} onClick={openCart}>
             <CartBlack />
           </div>
         </FlexBox>

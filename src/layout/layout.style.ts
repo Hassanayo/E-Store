@@ -5,7 +5,7 @@ export const LayoutWrapper = styled.div`
   background-color: white;
   padding: 0 72px;
   margin: 0 auto;
-  @media screen and (max-width: 1080px) {
+  @media screen and (max-width: 880px) {
     padding: 0 0;
   }
 `;

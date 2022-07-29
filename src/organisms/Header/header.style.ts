@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.nav`
   display: flex;
-  padding: 0 140px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   .nav-select {
     display: flex;
