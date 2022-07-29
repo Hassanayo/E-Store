@@ -21,7 +21,7 @@ export const ViewportProvider = ({children}: {children: React.ReactNode}) => {
     return <ViewportContext.Provider value={{width, height}} >{children}</ViewportContext.Provider>
 };
 
-export const useViewport = () => {
+export function useViewport(){
     const {width} = React.useContext(ViewportContext)
 
     const isMobile = width < MOBILE;

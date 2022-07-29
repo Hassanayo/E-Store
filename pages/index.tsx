@@ -8,6 +8,8 @@ import CarouselProducts from "../src/organisms/CarouselProducts";
 import DownloadSection from "../src/organisms/Download";
 import Footer from "../src/organisms/Footer";
 import LayoutBody from "../src/layout/Layout";
+import { useViewport } from "../src/context/viewportContext";
+
 
 export default function Organisms() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +20,8 @@ export default function Organisms() {
     isOpen && (document.documentElement.style.overflow = "hidden");
     !isOpen && (document.documentElement.style.overflow = "");
   }, [isOpen]);
+
+  const {isMobile} = useViewport()
 
   return (
     <>
