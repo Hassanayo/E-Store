@@ -6,8 +6,8 @@ import { StarratingSmall } from "../../assets/vectors";
 import { Select } from "../../molecules/Select";
 import { AddToCartBig } from "../../molecules/AddToCart";
 import ProductTab from "../ProductTab";
-import { useCart } from "../../context/CartContext";
-import { useProduct } from "../../context/ProductContext";
+import { useCart } from "../../Context/CartContext";
+import { useProduct } from "../../Context/ProductContext";
 
 export default function ProductPage({ products }: any) {
   const { addToCart } = useCart();

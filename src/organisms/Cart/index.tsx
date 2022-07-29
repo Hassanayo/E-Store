@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Close } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
 import Button from "../../atoms/Buttons";
-import { useCart } from "../../context/CartContext";
+import { useCart } from "../../Context/CartContext";
 import CartItem from "../../molecules/CartItem";
 import { CartContainer } from "./cart.style";
 import axios from "../../db/instance";

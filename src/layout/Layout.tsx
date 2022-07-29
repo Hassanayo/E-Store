@@ -1,5 +1,5 @@
 import React from "react";
-import { useViewport } from "../context/viewportContext";
+import { useViewport } from "../Context/viewportContext";
 import MobileHeader from "../MobileComponents/MobileHeader";
 import Footer from "../organisms/Footer";
 import Header from "../organisms/Header";

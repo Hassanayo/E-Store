@@ -1,4 +1,4 @@
-import { useCart } from "../../context/CartContext";
+import { useCart } from "../../Context/CartContext";
 import DetailedCartItem from "../../molecules/DetailedCartItem";
 import { BigCartContainer } from "./bigCartContainer.style";
 

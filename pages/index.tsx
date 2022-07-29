@@ -8,7 +8,7 @@ import CarouselProducts from "../src/organisms/CarouselProducts";
 import DownloadSection from "../src/organisms/Download";
 import Footer from "../src/organisms/Footer";
 import LayoutBody from "../src/layout/Layout";
-import { useViewport } from "../src/context/viewportContext";
+import { useViewport } from "../src/Context/viewportContext";
 
 
 export default function Organisms() {

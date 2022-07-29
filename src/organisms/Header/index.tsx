@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { CartBlack, HeartBlack, PersonIcon } from "../../assets/vectors";
 import { FlexBox } from "../../atoms/Boxes";
 import { Routes } from "../../constants/navigation";
-import { useCart } from "../../context/CartContext";
+import { useCart } from "../../Context/CartContext";
 import { SearchbarSmall } from "../../molecules/Searchbar";
 import ShoppingCart from "../Cart";
 import Megamenu from "../MegaMenu";
