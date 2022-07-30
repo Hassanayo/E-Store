@@ -16,6 +16,7 @@ export default function CarouselProducts() {
           <ProductCard source="/product3.png" price={50.0} name="Cream bag" />
           <ProductCard source="/product4.png" price={50.0} name="Cream bag" />
           <ProductCard source="/product1.png" price={50.0} name="Cream bag" />
+          <ProductCard source="/product4.png" price={50.0} name="Cream bag" />
         </Carousel>
 
 

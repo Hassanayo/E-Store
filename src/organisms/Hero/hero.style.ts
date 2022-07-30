@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import responsive from "../../theme/responsive";
 export const HeroContainer = styled.section`
   background-image: url("/HeroImage.png");
   background-repeat: no-repeat;
@@ -21,23 +21,39 @@ export const HeroContainer = styled.section`
     height: 45px;
     width: 1px;
     border-radius: 0px;
-    background: #BEBFC4;
+    background: #bebfc4;
   }
-  .hero-content{
+  .hero-content {
     padding: 80px 0 150px 100px;
+    ${responsive("$mobile")`
+    padding: 80px 20px;
+    
+  `}
   }
-  .hero-header{
-    font-family: 'Playfair Display';
+  .hero-header {
+    font-family: "Playfair Display";
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 48px;
-    color: #1D1F22;
+    color: #1d1f22;
     max-width: 500px;
     padding: 80px 0 60px 0;
-  }
-  .hero-btn{
-    padding-left: 50px;
+    ${responsive("$mobile")`
+    padding: 80px 0;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 27px;
+    color: #1D1F22;
+
     
+  `}
+  }
+  .hero-btn {
+    padding-left: 50px;
+    ${responsive("$mobile")`
+    padding: 0px;
+    
+  `}
   }
 `;

@@ -12,6 +12,7 @@ export default function LayoutBody({children}: {children: React.ReactNode;}) {
   return (
     <ClientOnly>
       <LayoutWrapper>
+        
         <nav>
           {isMobile ? <MobileHeader /> : <Header />}
         </nav>

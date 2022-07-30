@@ -37,8 +37,6 @@ export const CallToActionContainer = styled.div`
     }
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
-    padding-right: 0;
   }
 `;

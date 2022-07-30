@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const CarouselContainer = styled.div`
   width: 100%;
   display: flex;
-  
-  
-
+  justify-content: center;
+  align-items: center;
   .carousel-wrapper {
     width: 100%;
     display: flex;
@@ -44,4 +43,32 @@ export const CarouselContainer = styled.div`
 .carousel-content.show-4 > * {
     width: calc(100% / 4);
 }
-`;
+@media screen and (max-width: 1080px) {
+  .carousel-content-wrapper {
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+  }
+  .arrows{
+    display: none;
+  }
+  .carousel-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .carousel-content{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+
+  }
+}
+  
+`

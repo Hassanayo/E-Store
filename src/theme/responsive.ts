@@ -1,6 +1,7 @@
-const sizes = {
+export const sizes = {
     $xsmall: "468px",
     $small: "767px",
+    $mobile: "640px",
     $medium: "992px",
     $large: "1200px",
     $xlarge: "1400px",

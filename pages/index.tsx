@@ -21,14 +21,12 @@ export default function Organisms() {
     !isOpen && (document.documentElement.style.overflow = "");
   }, [isOpen]);
 
-  const {isMobile} = useViewport()
 
   return (
     <>
       <LayoutBody>
 
         <Hero />
-        <Banner />
         <CallToAction />
         <CarouselProducts />
         <BannerTwo />

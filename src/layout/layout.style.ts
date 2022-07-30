@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { sizes } from "../theme/responsive";
 
 export const LayoutWrapper = styled.div`
   max-width: 1440px;
@@ -8,6 +9,7 @@ export const LayoutWrapper = styled.div`
   @media screen and (max-width: 880px) {
     padding: 0 0;
   }
+  
 `;
 export const LayoutStore = styled.div`
   max-width: 1440px;

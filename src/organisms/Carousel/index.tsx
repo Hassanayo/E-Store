@@ -53,13 +53,15 @@ export default function Carousel({children, show} : any) {
   return (
     <CarouselContainer>
       <div className="carousel-wrapper">
-        <ArrowsLeftLong onClick={prev}/>
+        <div className="arrows"><ArrowsLeftLong onClick={prev}/></div>
+        
         <div className="carousel-content-wrapper">
           <div className={`carousel-content show-${show}`} style={{ transform: `translateX(-${currentIndex * (100 / show)}%)` }}>
             {children}
           </div>
         </div>
-        {currentIndex < (length - show) && <ArrowsRightLong onClick={next}/>}
+        <div className="arrows">{currentIndex < (length - show) && <ArrowsRightLong onClick={next}/>}</div>
+        
       </div>
     </CarouselContainer>
   );

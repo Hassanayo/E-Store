@@ -11,6 +11,8 @@ export default function Banner() {
   return (
     <BannerContainer>
       <GridBox grid="banner">
+        <div className="two-rows">
+
         <div className="banner-box">
           <p className="banner-title">Scarves</p>
           <h3 className="banner-header">COCKTAIL & PARTY</h3>
@@ -21,7 +23,7 @@ export default function Banner() {
           </p>
           <div>
             <Button variant="primary" width="195px" height="52px">
-              Button
+              Learn More
             </Button>
           </div>
         </div>
@@ -34,7 +36,7 @@ export default function Banner() {
             <h3 className="banner-header">THE OFFICE LIFE</h3>
             <div>
               <Button variant="primary" width="195px" height="52px">
-                Button
+                Learn More
               </Button>
             </div>
           </div>
@@ -46,10 +48,11 @@ export default function Banner() {
             <h3 className="banner-header">ECO SANDALS</h3>
             <div>
               <Button variant="primary" width="195px" height="52px">
-                Button
+                Learn More
               </Button>
             </div>
           </div>
+        </div>
         </div>
       </GridBox>
     </BannerContainer>

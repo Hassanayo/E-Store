@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import responsive, { sizes } from "../../theme/responsive";
 
 export const BannerContainer = styled.div`
   padding-bottom: 100px;
@@ -6,17 +7,16 @@ export const BannerContainer = styled.div`
     font-family: "Playfair Display";
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
     line-height: 77px;
     color: #1d1f22;
     padding-bottom: 40px;
+    font-size: 2.5em
   }
   .banner-title {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 28px;
     letter-spacing: 0.02em;
     color: #737680;
     padding-bottom: 15px;
@@ -26,14 +26,16 @@ export const BannerContainer = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 29px;
+    max-width: 70%;
     color: #1d1f22;
-    padding: 0 300px 20px 0;
+    padding: 0 0px 20px 0;
   }
   .banner-box {
     padding: 60px 80px 0 80px;
     background-image: url("/long-banner.png");
-    background-position: center;
+    background-position: center ;
+    
+    
     
   }
   .two-col {
@@ -70,5 +72,15 @@ export const BannerContainer = styled.div`
     img{
       width: 100%;
     }
+  }
+  @media (max-width: ${sizes.$mobile}){
+    .banner-box {
+    padding: 50px 0 0 20px;
+    background-image: url("/long-banner.png");
+    background-position: center;
+    
+  }
+  
+
   }
 `;

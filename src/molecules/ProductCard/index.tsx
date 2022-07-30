@@ -37,14 +37,7 @@ export default function ProductCard({
           className="product-img"
           onClick={() => router.push(Routes.store + id)}
         >
-          <Image
-            layout="responsive"
-            width={300}
-            height={450}
-            className=""
-            src={source}
-            alt=""
-          />
+          <img src={source} alt=""  />
         </div>
         <div className="hit">
           <BrandHit />
