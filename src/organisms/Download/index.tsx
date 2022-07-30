@@ -10,7 +10,7 @@ export default function DownloadSection() {
         <div>
             <p className='d-title'>Fashion To Take Away</p>
             <h3 className='d-details'>Download our app on your phone</h3>
-            <FlexBox gap='10px'>
+            <FlexBox className='img-box' gap='10px'>
                 <img src="./btn-img1.png" alt=""  />
                 <img src="./btn-img2.png" alt=""  />
                 

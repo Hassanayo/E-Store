@@ -10,51 +10,38 @@ import { BannerContainer } from "./banner.styles";
 export default function Banner() {
   return (
     <BannerContainer>
-      <GridBox grid="banner">
-        <div className="two-rows">
-
-        <div className="banner-box">
-          <p className="banner-title">Scarves</p>
-          <h3 className="banner-header">COCKTAIL & PARTY</h3>
-          <p className="banner-details">
-            Find stunning women's cocktail dresses and party dresses. Stand out
-            in lace and metallic cocktail dresses and party dresses from all
-            your favorite brands.
-          </p>
-          <div>
-            <Button variant="primary" width="195px" height="52px">
-              Learn More
-            </Button>
-          </div>
+      <div className="two-rows">
+        <div className="upper-row">
+          <FlexBox className="content-box" flexDirection="column">
+            <p className="banner-title">Scarves</p>
+            <h3 className="banner-header">COCKTAIL & PARTY</h3>
+            <p className="banner-details">
+              Find stunning women's cocktail dresses and party dresses. Stand
+              out in lace and metallic cocktail dresses and party dresses from
+              all your favorite brands.
+            </p>
+            <Button width="195px" height="52px">LEARN MORE</Button>
+          </FlexBox>
         </div>
-        <div className="two-col">
-          <div
-            className="banner-box"
-            style={{ backgroundImage: `url("./shirt-banner.png")` }}
-          >
-            <p className="banner-title">T-Shirts</p>
-            <h3 className="banner-header">THE OFFICE LIFE</h3>
-            <div>
-              <Button variant="primary" width="195px" height="52px">
-                Learn More
-              </Button>
+        <div className="lower-row">
+          <div className="two-col">
+            <div className="left-col">
+              <div className="content-box">
+                <p className="banner-title">T-Shirts</p>
+                <h3 className="banner-header">THE OFFICE LIFE</h3>
+                <Button height="52px">LEARN MORE</Button>
+              </div>
             </div>
-          </div>
-          <div
-            className="banner-box"
-            style={{ backgroundImage: `url("./sandals-banner.png")` }}
-          >
-            <p className="banner-title">Shoes</p>
-            <h3 className="banner-header">ECO SANDALS</h3>
-            <div>
-              <Button variant="primary" width="195px" height="52px">
-                Learn More
-              </Button>
+            <div className="right-col">
+            <div className="content-box">
+                <p className="banner-title">Shoes</p>
+                <h3 className="banner-header">ECO SANDALS</h3>
+                <Button height="52px">LEARN MORE</Button>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-      </GridBox>
+      </div>
     </BannerContainer>
   );
 }

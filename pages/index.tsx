@@ -27,6 +27,7 @@ export default function Organisms() {
       <LayoutBody>
 
         <Hero />
+        <Banner />
         <CallToAction />
         <CarouselProducts />
         <BannerTwo />
