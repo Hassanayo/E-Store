@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const ProductcardContainer = styled.div`
   .product-box {
-    min-width: 200px;
+    max-width: 200px;
     margin: 0 auto;
     position: relative;
-    
+    :hover {
       box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
-    
+    }
   }
   .product-img {
     img{
