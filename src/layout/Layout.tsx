@@ -2,6 +2,7 @@ import React from "react";
 import { useViewport } from "../Context/viewportContext";
 import MobileFooter from "../MobileComponents/MobileFooter";
 import MobileHeader from "../MobileComponents/MobileHeader";
+import MobileMenu from "../MobileComponents/MobileMenu";
 import Footer from "../organisms/Footer";
 import Header from "../organisms/Header";
 import ClientOnly from "../utils/clientOnly";
@@ -18,6 +19,7 @@ export default function LayoutBody({children}: {children: React.ReactNode;}) {
           {isMobile ? <MobileHeader /> : <Header />}
         </nav>
         {children}
+        <div className="mobile-menu">{isMobile ? <MobileMenu/> : ""}</div>
 
         <footer>
           {isMobile ? <MobileFooter/> : <Footer />}

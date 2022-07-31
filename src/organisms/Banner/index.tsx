@@ -1,10 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
-import Image from "next/image";
 import React from "react";
 import { FlexBox } from "../../atoms/Boxes";
 import Button from "../../atoms/Buttons";
-import { GridBox } from "../../atoms/GridSystem";
 import { BannerContainer } from "./banner.styles";
 
 export default function Banner() {
@@ -29,14 +27,14 @@ export default function Banner() {
               <div className="content-box">
                 <p className="banner-title">T-Shirts</p>
                 <h3 className="banner-header">THE OFFICE LIFE</h3>
-                <Button height="52px">LEARN MORE</Button>
+                <Button width="195px" height="52px">LEARN MORE</Button>
               </div>
             </div>
             <div className="right-col">
             <div className="content-box">
                 <p className="banner-title">Shoes</p>
                 <h3 className="banner-header">ECO SANDALS</h3>
-                <Button height="52px">LEARN MORE</Button>
+                <Button width="195px" height="52px">LEARN MORE</Button>
               </div>
             </div>
           </div>

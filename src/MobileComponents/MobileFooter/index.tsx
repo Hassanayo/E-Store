@@ -5,8 +5,8 @@ import { MobileFooterContainer } from './mobileFooter.style'
 export default function MobileFooter() {
     const footerList = [
         {
-            title: "About Us",
-            content: "About Us"
+            title: "ABOUT US",
+            content: "ABOUT US"
         },
         {
             title: "DEPARMENTS",

@@ -9,15 +9,6 @@ interface customSelectProps{
 
 export default function CustomSelect({content, title}: customSelectProps) {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
-
-  const optionsList = [
-    "ABOUT US",
-    "DEPARMENTS",
-    "HELP",
-    "PAYMENTS & DELIVERY",
-    "SOCIAL",
-  ];
-
   function toggleOptions() {
     setIsOptionsOpen(!isOptionsOpen);
   }
