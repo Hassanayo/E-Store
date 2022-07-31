@@ -1,5 +1,6 @@
 import React from "react";
 import { useViewport } from "../Context/viewportContext";
+import MobileFooter from "../MobileComponents/MobileFooter";
 import MobileHeader from "../MobileComponents/MobileHeader";
 import Footer from "../organisms/Footer";
 import Header from "../organisms/Header";
@@ -19,7 +20,7 @@ export default function LayoutBody({children}: {children: React.ReactNode;}) {
         {children}
 
         <footer>
-          <Footer />
+          {isMobile ? <MobileFooter/> : <Footer />}
         </footer>
       </LayoutWrapper>
     </ClientOnly>
