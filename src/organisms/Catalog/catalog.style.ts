@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CatalogContainer = styled.div`
   border-top: 1px solid #f1f2f4;
   display: flex;
+
   .categories {
     padding: 28px 40px;
     font-family: "Playfair Display";
@@ -29,10 +30,17 @@ export const CatalogContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 36px;
+    padding: 0 10px;
   }
   @media screen and (max-width: 1180px) {
     .product-grid{
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
+  @media screen and (max-width: 650px) {
+    .left-category{
+      display: none;
     }
     
   }

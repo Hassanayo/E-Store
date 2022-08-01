@@ -28,7 +28,7 @@ export default function Catalog() {
 
   return (
     <CatalogContainer>
-      <FlexBox flexDirection="column">
+      <FlexBox className="left-category" flexDirection="column">
         <div className="categories">
           <p>Categories</p>
         </div>

@@ -25,3 +25,11 @@ export const BigCartContainer = styled.div`
     background: gray;
   }
 `;
+export const BigCartBodyContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 650px){
+    flex-direction: column;
+
+  }
+`

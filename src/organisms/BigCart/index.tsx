@@ -1,6 +1,8 @@
+import { FlexBox } from "../../atoms/Boxes";
 import { useCart } from "../../Context/CartContext";
 import DetailedCartItem from "../../molecules/DetailedCartItem";
-import { BigCartContainer } from "./bigCartContainer.style";
+import Invoice from "../../molecules/Invoice";
+import { BigCartBodyContainer, BigCartContainer } from "./bigCartContainer.style";
 
 export default function BigCart() {
   const {cart, handleDelete} = useCart()
@@ -13,5 +15,14 @@ export default function BigCart() {
         })}
         
       </BigCartContainer>
+    )
+  }
+  export function BigCartBody() {
+    const {cart} = useCart()
+    return (
+      <BigCartBodyContainer >
+        <BigCart/>
+        <Invoice cart={cart} />
+      </BigCartBodyContainer>
     )
   }

@@ -10,9 +10,6 @@ export default function Store({ products }: any) {
   return (
     <LayoutBody>
       <LayoutStore>
-        <Breadcrumbs>
-          Home | <span className="span">Pants</span>
-        </Breadcrumbs>
         <Catalog />
       </LayoutStore>
     </LayoutBody>

@@ -373,6 +373,7 @@ export const MenuSearch = ({onClick, colour="#A3A5Ad"}:IconProps) => (
     viewBox="0 0 30 20"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    onClick={onClick}
   >
     <path
       fillRule="evenodd"

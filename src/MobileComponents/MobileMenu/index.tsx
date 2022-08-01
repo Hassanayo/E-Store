@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import {
     AddToCartIcon,
@@ -8,6 +9,7 @@ import {
   PersonIcon,
 } from "../../assets/vectors";
 import CircleIcons from "../../atoms/CircleIcons";
+import { Routes } from "../../constants/navigation";
 import colors from "../../theme/colors";
 import { MobileMenuContainer } from "./mobileMenu.style";
 
@@ -18,25 +20,26 @@ export default function MobileMenu() {
         setCurrentIndex(index)
 
     }
-    
+    const router = useRouter();
+
 
   return (
     <MobileMenuContainer>
       
         {/* <HomeIcon onClick={setColor} colour={isSelected ? "black" : "#A3A5AD"} /> */}
       <div >
-        <HomeIcon  className="icon"/>
+        <HomeIcon onClick={() => router.push(Routes.home)} colour="#A3A5AD"  className="icon"/>
       </div>
       <div>
-        <MenuSearch />
+        <MenuSearch colour="#A3A5AD" onClick={() => router.push(Routes.store)}/>
       </div>
       <div>
-        <HeartBlack className="icon" />
+        <HeartBlack colour="#A3A5AD" className="icon" />
       </div>
       <div>
-        <PersonIcon />
+        <PersonIcon colour="#A3A5AD" />
       </div>
-      <div className="fab">
+      <div className="fab" onClick={() => router.push(Routes.detailedCart)}>
         <CircleIcons colour={colors.brandPrimary} size="66px">
             <AddToCartIcon/>
         </CircleIcons>

@@ -92,5 +92,10 @@ export const DetailedCartItemContainer = styled.div`
       padding-bottom: 20px;
     }
   }
+  @media screen and (max-width: 650px) {
+   .text-container{
+    display: none;
+   } 
+  }
   
 `;
