@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SelectContainer = styled.select`
   height: 52px;
-  width: 509px;
+  min-width: 509px;
   padding: 13px 30px;
   border: 1px solid #f1f2f3;
   background: #fefefe;

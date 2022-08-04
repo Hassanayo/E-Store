@@ -11,4 +11,11 @@ export const ProductTabContainer = styled.div`
     padding-bottom: 20px;
     cursor: pointer;
   }
+  @media screen and (max-width: 650px) {
+    margin-top: 32px;
+    .tab-head{
+      font-size: 15px;
+      text-align: center;
+    }
+  }
 `;

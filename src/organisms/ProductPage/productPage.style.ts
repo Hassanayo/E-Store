@@ -4,10 +4,14 @@ export const ProductPageContainer = styled.section`
   display: flex;
   justify-content: space-between;
   gap: 100px;
-  .images-column {
-  }
   .left-img {
-    width: 590px;
+    max-width: 590px;
+    img {
+      width: 500px;
+    }
+  }
+  .details-column {
+    max-width: 510px;
   }
   .product-name {
     font-family: "Playfair Display";
@@ -44,16 +48,43 @@ export const ProductPageContainer = styled.section`
     width: fit-content;
     padding-bottom: 64px;
   }
-  .size-guide{
-    font-family: 'Playfair Display';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 29px;
-text-align: right;
+  .size-guide {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: right;
 
-/* MainTextColour/Primary */
+    /* MainTextColour/Primary */
 
-color: #1D1F22;
+    color: #1d1f22;
+  }
+  @media screen and (max-width: 1280px) {
+    .left-img {
+    max-width: 590px;
+    img {
+      width: 100%;
+    }
+  }
+  }
+  @media screen and (max-width: 1080px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (max-width: 650px){
+    .left-img {
+    max-width: 590px;
+    img {
+      width: 100%;
+    }
+  }
+    .select-box{
+      display: none;
+    }
+    .details-column{
+      padding: 0 20px;
+    }
+    
   }
 `;

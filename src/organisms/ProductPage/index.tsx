@@ -1,16 +1,19 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import React from "react";
 import { ProductPageContainer } from "./productPage.style";
 import { FlexBox } from "../../atoms/Boxes";
 import { StarratingSmall } from "../../assets/vectors";
 import { Select } from "../../molecules/Select";
-import { AddToCartBig } from "../../molecules/AddToCart";
+import { AddToCartBig, AddToCartDefault } from "../../molecules/AddToCart";
 import ProductTab from "../ProductTab";
 import { useCart } from "../../Context/CartContext";
 import { useProduct } from "../../Context/ProductContext";
+import { useViewport } from "../../Context/viewportContext";
 
 export default function ProductPage({ products }: any) {
   const { addToCart } = useCart();
+  const {isMobile} = useViewport()
   // const router = useRouter();
   // const route = router.asPath;
   // const routed = route.replace(/\/+$/, "");
@@ -21,6 +24,9 @@ export default function ProductPage({ products }: any) {
       <ProductPageContainer key={products.id}>
         <div className="images-column">
           <div className="left-img">
+            <img src={products.img} alt="" />
+          </div>
+          {/* <div className="left-img">
             <Image
               src={products.img}
               alt="p-img"
@@ -28,18 +34,9 @@ export default function ProductPage({ products }: any) {
               width={100}
               height={100}
             />
-          </div>
-          <div className="left-img">
-            <Image
-              src={products.img}
-              alt="p-img"
-              layout="responsive"
-              width={100}
-              height={100}
-            />
-          </div>
+          </div> */}
         </div>
-        <FlexBox flexDirection="column">
+        <FlexBox className="details-column" flexDirection="column">
           <div>
             <p className="product-name">{products.productname}</p>
             <FlexBox justifyContent="space-between">
@@ -66,6 +63,7 @@ export default function ProductPage({ products }: any) {
               gap="10px"
               style={{ paddingBottom: "20px" }}
             >
+              <div className="select-box">
               <Select>
                 <option value="" disabled defaultValue={""} hidden>
                   Size
@@ -82,9 +80,12 @@ export default function ProductPage({ products }: any) {
                 <option value="md">Red</option>
                 <option value="lg">Green</option>
               </Select>
+
+              </div>
             </FlexBox>
             <div style={{ paddingBottom: "20px" }}>
-              <AddToCartBig click={() => addToCart(products)} />
+              {isMobile ? <AddToCartDefault /> : <AddToCartBig click={() => addToCart(products)} />}
+              
             </div>
             <FlexBox flexDirection="column" alignItems="flex-end" gap="20px">
               <p className="reviews">Save for later</p>

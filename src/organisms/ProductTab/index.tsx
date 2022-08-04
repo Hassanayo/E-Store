@@ -32,7 +32,7 @@ export default function ProductTab() {
                 borderBottom: `${currentIndex == index ? "2px solid black" : ""}`
               }}
             >
-              <h3>{step}</h3>
+              <h3 className="tab-head">{step}</h3>
             </div>
           );
         })}
